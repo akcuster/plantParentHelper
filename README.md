@@ -4,7 +4,14 @@
 
 ### Problem Statement
 
-Houseplants can bring a lot of joy and life into your home, but their individual needs can vary greatly. As your plant
-collection grows, it can be difficult to keep track of watering schedules, soil conditions, fertilizer preferences, etc... 
-That's where Plant Parent Helper comes in! It will be a website where you can keep track of your collection and see all
-of your plant's individual needs at a glance. 
+Keeping track of the varying needs of our chlorophyll loving friends only gets harder as our plant collections grow. Combining that with the natural human tendency to quickly grow bored with simple, repetitive tasks is just asking for disaster. My solution is to create a site that gamifies plant care by awarding points for adding plants to your collection and caring for them. Compete against your friends to see who has the lushest indoor tropical paradise!
+
+### Project Technologies/Techniques
+
+* Dependency Management
+  * Maven
+* Logging
+  * Log4J2
+* Unit Testing
+  * JUnit tests
+* IDE: IntelliJ IDEA
