@@ -15,3 +15,26 @@ Keeping track of the varying needs of our chlorophyll loving friends only gets h
 * Unit Testing
   * JUnit tests
 * IDE: IntelliJ IDEA
+* Database
+  * MySQL 8.0.22
+* ORM Framework
+  * Hibernate 5
+* Web Services consumed using Java
+* CSS
+  * Bootstrap
+* Data Validation
+* Logging
+  * Log4J2
+* Hosting
+  * AWS
+* Unit Testing
+  * JUnit tests to achieve 80%+ code coverage
+
+
+### Design
+* [User Stories](designDocuments/userStories.md)
+* [Screen Design](designDocuments/screenDesign.md)
+
+### [Project Plan](designDocuments/projectPlan.md)
+
+### [TimeLog](timeLog.md)
