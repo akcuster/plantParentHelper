@@ -3,7 +3,7 @@
 ### Week 6
 ####
 - [ ] Set up Hibernate
-- [ ] Create the database
+- [x] Create the database
 - [ ] User entity
 - [ ] User table
 - [ ] User DAO
