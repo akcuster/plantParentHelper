@@ -1,5 +1,7 @@
 package com.acuster.entity;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -15,6 +17,8 @@ import java.util.Objects;
 @Entity(name = "User")
 @Table(name = "user")
 public class User {
+
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
