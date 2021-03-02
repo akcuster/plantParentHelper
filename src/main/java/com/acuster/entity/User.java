@@ -7,7 +7,9 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * A class to represent a user
@@ -17,8 +19,6 @@ import java.util.Objects;
 @Entity(name = "User")
 @Table(name = "user")
 public class User {
-
-    private final Logger logger = LogManager.getLogger(this.getClass());
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -40,10 +40,11 @@ public class User {
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
-    private String userLevel;
-
     @Column(name = "user_points")
     private int userPoints;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Plant> plants = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -181,18 +182,6 @@ public class User {
      *
      * @return the user level
      */
-    public String getUserLevel() {
-        return userLevel;
-    }
-
-    /**
-     * Sets user level.
-     *
-     * @param userLevel the user level
-     */
-    public void setUserLevel(String userLevel) {
-        this.userLevel = userLevel;
-    }
 
     /**
      * Gets user points.
@@ -221,6 +210,44 @@ public class User {
         return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
     }
 
+    /**
+     * Get plants.
+     *
+     * @return the plants
+     */
+    public Set<Plant> getPlants() {
+        return plants;
+    }
+
+    /**
+     * Sets plants.
+     *
+     * @param plants the orders
+     */
+    public void setPlants(Set<Plant> plants) {
+        this.plants = plants;
+    }
+
+    /**
+     * Add plant.
+     *
+     * @param plant the plant
+     */
+    public void addPlant(Plant plant) {
+        plants.add(plant);
+        plant.setUser((this));
+    }
+
+    /**
+     * Remove plant.
+     *
+     * @param plant the order
+     */
+    public void removePlant(Plant plant) {
+        plants.remove(plant);
+        plant.setUser(null);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -231,13 +258,12 @@ public class User {
                 Objects.equals(userPassword, user.userPassword) &&
                 Objects.equals(firstName, user.firstName) &&
                 Objects.equals(lastName, user.lastName) &&
-                Objects.equals(dateOfBirth, user.dateOfBirth) &&
-                Objects.equals(userLevel, user.userLevel);
+                Objects.equals(dateOfBirth, user.dateOfBirth);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userName, userPassword, firstName, lastName, dateOfBirth, userLevel, userPoints);
+        return Objects.hash(id, userName, userPassword, firstName, lastName, dateOfBirth, userPoints);
     }
 
     @Override
@@ -250,7 +276,6 @@ public class User {
                 ", lastName='" + lastName + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", age=" + getAge() +
-                ", userLevel='" + userLevel + '\'' +
                 ", userPoints=" + userPoints +
                 '}';
     }

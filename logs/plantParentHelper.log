@@ -1,0 +1,10 @@
+[DEBUG] 2021-03-02 03:13:24.575 [main] GenericDao - Searching for: c
+[DEBUG] 2021-03-02 03:13:24.676 [main] GenericDao - Searching for entity with lastName = Curry
+[DEBUG] 2021-03-02 03:13:24.729 [main] GenericDao - Searching for entity with lastName = c
+[DEBUG] 2021-03-02 03:17:42.741 [main] GenericDao - Searching for: c
+[DEBUG] 2021-03-02 03:19:28.363 [main] GenericDao - Searching for: c
+[DEBUG] 2021-03-02 03:19:28.942 [main] GenericDao - Searching for entity with lastName = Curry
+[DEBUG] 2021-03-02 03:19:29.039 [main] GenericDao - Searching for entity with lastName = c
+[DEBUG] 2021-03-02 03:24:56.429 [main] GenericDao - Searching for: c
+[DEBUG] 2021-03-02 03:24:56.763 [main] GenericDao - Searching for entity with lastName = Curry
+[DEBUG] 2021-03-02 03:24:56.866 [main] GenericDao - Searching for entity with lastName = c
