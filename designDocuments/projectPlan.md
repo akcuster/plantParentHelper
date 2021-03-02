@@ -2,19 +2,19 @@
 
 ### Week 6
 ####
-- [ ] Set up Hibernate
+- [x] Set up Hibernate
 - [x] Create the database
-- [ ] User entity
-- [ ] User table
-- [ ] User DAO
+- [x] User entity
+- [x] User table
+- [x] User DAO
 - [ ] User controller
-- [ ] Add SessionFactoryProvider
+- [x] Add SessionFactoryProvider
 - [ ] SignUp servlet
 - [ ] Sign Up jsp
-- [ ] Create unit test for user dao
+- [x] Create unit test for user dao
 - [ ] Test full user sign up
-- [ ] Plant entity
-- [ ] Plant table
+- [x] Plant entity
+- [x] Plant table
 - [ ] Plant DAO
 - [ ] Plant controller
 - [ ] Create User_Plant table
@@ -22,7 +22,7 @@
 - [ ] Create Home Page template
 - [ ] Deploy application to AWS
 - [ ] Weekly Reflection
-- [ ] Check-point 1 (behind schedule)
+- [x] Check-point 1 (behind schedule)
 
 ### Week 7
 - [ ] Role entity class
