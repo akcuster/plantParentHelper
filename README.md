@@ -34,6 +34,7 @@ Keeping track of the varying needs of our chlorophyll loving friends only gets h
 ### Design
 * [User Stories](designDocuments/userStories.md)
 * [Screen Design](designDocuments/screenDesign.md)
+* [Database Design](designDocuments/databaseDesign.png)
 
 ### [Project Plan](designDocuments/projectPlan.md)
 
