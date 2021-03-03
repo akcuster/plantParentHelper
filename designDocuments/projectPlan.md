@@ -15,7 +15,7 @@
 - [ ] Test full user sign up
 - [x] Plant entity
 - [x] Plant table
-- [ ] Plant DAO
+- [x] Plant DAO
 - [ ] Plant controller
 - [ ] Create User_Plant table
 - [ ] Add application flow to design documents

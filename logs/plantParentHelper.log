@@ -8,3 +8,12 @@
 [DEBUG] 2021-03-02 03:24:56.429 [main] GenericDao - Searching for: c
 [DEBUG] 2021-03-02 03:24:56.763 [main] GenericDao - Searching for entity with lastName = Curry
 [DEBUG] 2021-03-02 03:24:56.866 [main] GenericDao - Searching for entity with lastName = c
+[ERROR] 2021-03-02 20:59:42.556 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 20:59:45.823 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[DEBUG] 2021-03-02 20:59:45.827 [main] GenericDao - Searching for: c
+[ERROR] 2021-03-02 20:59:46.267 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 20:59:46.645 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 20:59:47.009 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 20:59:47.301 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 20:59:47.631 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 20:59:47.959 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
