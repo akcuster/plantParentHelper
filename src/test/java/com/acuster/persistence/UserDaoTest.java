@@ -1,5 +1,6 @@
 package com.acuster.persistence;
 
+import com.acuster.entity.Plant;
 import com.acuster.entity.User;
 import com.acuster.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
@@ -69,6 +70,27 @@ class UserDaoTest {
         assertNotEquals(0,id);
         User insertedUser = (User)genericDao.getById(id);
         assertEquals(newUser, insertedUser);
+    }
+
+    /**
+     * Verify successful insert of a user with a plant
+     */
+    @Test
+    void insertWithOrderSuccess() {
+
+        User newUser = new User( "fflintstone", "yabbadabbadoo", "Fred", "Flintstone", LocalDate.parse("1968-01-01"));
+
+        String plantName = "Monstera";
+        Plant plant = new Plant(plantName, newUser);
+
+        newUser.addPlant(plant);
+
+        int id = genericDao.insert(newUser);
+
+        assertNotEquals(0, id);
+        User insertedUser = (User)genericDao.getById(id);
+        assertEquals(newUser, insertedUser);
+        assertEquals(1, insertedUser.getPlants().size());
     }
 
     /**

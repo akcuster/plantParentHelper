@@ -17,3 +17,52 @@
 [ERROR] 2021-03-02 20:59:47.301 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
 [ERROR] 2021-03-02 20:59:47.631 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
 [ERROR] 2021-03-02 20:59:47.959 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 21:03:45.561 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 21:03:50.869 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[DEBUG] 2021-03-02 21:03:50.873 [main] GenericDao - Searching for: c
+[ERROR] 2021-03-02 21:03:51.014 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[DEBUG] 2021-03-02 21:03:51.034 [main] GenericDao - Searching for entity with PlantName = Golden Pothos
+[ERROR] 2021-03-02 21:03:51.107 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[DEBUG] 2021-03-02 21:03:51.109 [main] GenericDao - Searching for entity with PlantName = p
+[ERROR] 2021-03-02 21:03:51.181 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 21:03:51.278 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 21:03:51.342 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 21:03:51.801 [main] Database - java.sql.SQLSyntaxErrorException: Table 'test_plant_collector.plant' doesn't exist
+[ERROR] 2021-03-02 21:07:13.794 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[DEBUG] 2021-03-02 21:07:13.799 [main] GenericDao - Searching for: c
+[ERROR] 2021-03-02 21:07:13.951 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[DEBUG] 2021-03-02 21:07:13.969 [main] GenericDao - Searching for entity with PlantName = Golden Pothos
+[ERROR] 2021-03-02 21:07:14.046 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[DEBUG] 2021-03-02 21:07:14.047 [main] GenericDao - Searching for entity with PlantName = p
+[ERROR] 2021-03-02 21:07:14.141 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:07:14.219 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:07:14.318 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:07:14.769 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:10:45.447 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:10:50.654 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[DEBUG] 2021-03-02 21:10:50.674 [main] GenericDao - Searching for entity with PlantName = Golden Pothos
+[ERROR] 2021-03-02 21:10:50.786 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[DEBUG] 2021-03-02 21:10:50.793 [main] GenericDao - Searching for entity with PlantName = p
+[ERROR] 2021-03-02 21:10:50.850 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:10:50.932 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:10:51.017 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:10:51.520 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:20:33.446 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:20:38.501 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[DEBUG] 2021-03-02 21:20:38.547 [main] GenericDao - Searching for entity with plantName = Golden Pothos
+[ERROR] 2021-03-02 21:20:39.136 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[DEBUG] 2021-03-02 21:20:39.144 [main] GenericDao - Searching for entity with plantName = p
+[ERROR] 2021-03-02 21:20:39.492 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:20:39.602 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:20:39.735 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[ERROR] 2021-03-02 21:20:39.885 [main] Database - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`test_plant_collector`.`plant`, CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`))
+[DEBUG] 2021-03-02 21:23:34.466 [main] GenericDao - Searching for entity with plantName = Golden Pothos
+[DEBUG] 2021-03-02 21:23:35.155 [main] GenericDao - Searching for entity with plantName = p
+[DEBUG] 2021-03-02 21:35:05.599 [main] GenericDao - Searching for entity with plantName = Golden Pothos
+[DEBUG] 2021-03-02 21:35:06.506 [main] GenericDao - Searching for entity with plantName = p
+[DEBUG] 2021-03-02 21:37:32.804 [main] GenericDao - Searching for: c
+[DEBUG] 2021-03-02 21:37:33.803 [main] GenericDao - Searching for entity with lastName = Curry
+[DEBUG] 2021-03-02 21:37:33.990 [main] GenericDao - Searching for entity with lastName = c
+[DEBUG] 2021-03-02 21:52:51.269 [main] GenericDao - Searching for: c
+[DEBUG] 2021-03-02 21:52:51.928 [main] GenericDao - Searching for entity with lastName = Curry
+[DEBUG] 2021-03-02 21:52:52.324 [main] GenericDao - Searching for entity with lastName = c

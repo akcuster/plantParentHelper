@@ -25,9 +25,11 @@ class PlantaDaoTest {
     @BeforeEach
     void setUp() {
 
+        genericDao = new GenericDao(Plant.class);
+
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-        genericDao = new GenericDao(Plant.class);
+
     }
 
     /**
@@ -36,16 +38,7 @@ class PlantaDaoTest {
     @Test
     void getAllPlantsSuccess() {
         List<Plant> Plants = (List<Plant>) genericDao.getAll();
-        assertEquals(6, Plants.size());
-    }
-
-    /**
-     * Verifies gets Plants by last name successfully.
-     */
-    @Test
-    void getByLastNameSuccess() {
-        List<Plant> Plants = (List<Plant>)genericDao.getByLastName("c");
-        assertEquals(3, Plants.size());
+        assertEquals(7, Plants.size());
     }
 
     /**
@@ -55,7 +48,7 @@ class PlantaDaoTest {
     void getPlantsByIdSuccess() {
         Plant retrievedPlant = (Plant)genericDao.getById(3);
         assertNotNull(retrievedPlant);
-        assertEquals("Golden Pothos", retrievedPlant.getPlantName());
+        assertEquals("Monstera", retrievedPlant.getPlantName());
 
     }
 
@@ -66,7 +59,7 @@ class PlantaDaoTest {
     void insertSuccess() {
         GenericDao userDao = new GenericDao(User.class);
         User user = (User)userDao.getById(1);
-        Plant newPlant = new Plant("Golden Pothos", user);
+        Plant newPlant = new Plant("Jade Plant", user);
         int id = genericDao.insert(newPlant);
         assertNotEquals(0, id);
         Plant insertedPlant = (Plant)genericDao.getById(id);
@@ -88,9 +81,9 @@ class PlantaDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<Plant> Plants = (List<Plant>)genericDao.getByPropertyEqual("PlantName", "Golden Pothos");
-        assertEquals(1, Plants.size());
-        assertEquals(3, Plants.get(0).getId());
+        List<Plant> Plants = (List<Plant>)genericDao.getByPropertyEqual("plantName", "Golden Pothos");
+        assertEquals(2, Plants.size());
+        assertEquals(1, Plants.get(0).getId());
     }
 
     /**
@@ -98,8 +91,8 @@ class PlantaDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<Plant> Plants = (List<Plant>)genericDao.getByPropertyLike("PlantName", "p");
-        assertEquals(3, Plants.size());
+        List<Plant> Plants = (List<Plant>)genericDao.getByPropertyLike("plantName", "p");
+        assertEquals(5, Plants.size());
     }
 
     /**

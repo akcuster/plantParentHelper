@@ -1,0 +1,1304 @@
+[DEBUG] 2021-03-02 21:37:26.539 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2021-03-02 21:37:26.550 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2021-03-02 21:37:26.557 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2021-03-02 21:37:26.747 [main] Version - HHH000412: Hibernate Core {5.4.4.Final}
+[DEBUG] 2021-03-02 21:37:26.755 [main] Environment - HHH000206: hibernate.properties not found
+[DEBUG] 2021-03-02 21:37:27.306 [main] LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[DEBUG] 2021-03-02 21:37:27.307 [main] LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[DEBUG] 2021-03-02 21:37:27.316 [main] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[DEBUG] 2021-03-02 21:37:27.885 [main] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2021-03-02 21:37:27.926 [main] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[DEBUG] 2021-03-02 21:37:27.928 [main] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2021-03-02 21:37:27.961 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[DEBUG] 2021-03-02 21:37:28.049 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@7a8406c2
+[DEBUG] 2021-03-02 21:37:28.050 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@7a8406c2
+[DEBUG] 2021-03-02 21:37:28.050 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@7a8406c2
+[DEBUG] 2021-03-02 21:37:28.051 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@704641e3
+[DEBUG] 2021-03-02 21:37:28.052 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@5d7ca698
+[DEBUG] 2021-03-02 21:37:28.053 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@16e7b402
+[DEBUG] 2021-03-02 21:37:28.055 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@2ba5aa7a
+[DEBUG] 2021-03-02 21:37:28.055 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@2ba5aa7a
+[DEBUG] 2021-03-02 21:37:28.055 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@2ba5aa7a
+[DEBUG] 2021-03-02 21:37:28.057 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@3fe46690
+[DEBUG] 2021-03-02 21:37:28.057 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@3fe46690
+[DEBUG] 2021-03-02 21:37:28.057 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@3fe46690
+[DEBUG] 2021-03-02 21:37:28.059 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@317e9c3c
+[DEBUG] 2021-03-02 21:37:28.059 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@317e9c3c
+[DEBUG] 2021-03-02 21:37:28.059 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@317e9c3c
+[DEBUG] 2021-03-02 21:37:28.063 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@47ffe971
+[DEBUG] 2021-03-02 21:37:28.064 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@47ffe971
+[DEBUG] 2021-03-02 21:37:28.064 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@47ffe971
+[DEBUG] 2021-03-02 21:37:28.067 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@10c07b8d
+[DEBUG] 2021-03-02 21:37:28.067 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@10c07b8d
+[DEBUG] 2021-03-02 21:37:28.067 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@10c07b8d
+[DEBUG] 2021-03-02 21:37:28.069 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@21c815e4
+[DEBUG] 2021-03-02 21:37:28.069 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@21c815e4
+[DEBUG] 2021-03-02 21:37:28.069 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@21c815e4
+[DEBUG] 2021-03-02 21:37:28.070 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@761956ac
+[DEBUG] 2021-03-02 21:37:28.070 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@761956ac
+[DEBUG] 2021-03-02 21:37:28.070 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@761956ac
+[DEBUG] 2021-03-02 21:37:28.071 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@36cc9385
+[DEBUG] 2021-03-02 21:37:28.071 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@36cc9385
+[DEBUG] 2021-03-02 21:37:28.072 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@10643593
+[DEBUG] 2021-03-02 21:37:28.073 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@10643593
+[DEBUG] 2021-03-02 21:37:28.076 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@6917bb4
+[DEBUG] 2021-03-02 21:37:28.077 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@6917bb4
+[DEBUG] 2021-03-02 21:37:28.078 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1c7f96b1
+[DEBUG] 2021-03-02 21:37:28.080 [main] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@7b6e5c12
+[DEBUG] 2021-03-02 21:37:28.084 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@4ee6291f
+[DEBUG] 2021-03-02 21:37:28.085 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@4ee6291f
+[DEBUG] 2021-03-02 21:37:28.086 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@44e93c1f
+[DEBUG] 2021-03-02 21:37:28.087 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@44e93c1f
+[DEBUG] 2021-03-02 21:37:28.110 [main] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@290d10ef
+[DEBUG] 2021-03-02 21:37:28.111 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@290d10ef
+[DEBUG] 2021-03-02 21:37:28.119 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@4110765e
+[DEBUG] 2021-03-02 21:37:28.119 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@4110765e
+[DEBUG] 2021-03-02 21:37:28.122 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@20cece0b
+[DEBUG] 2021-03-02 21:37:28.122 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@20cece0b
+[DEBUG] 2021-03-02 21:37:28.132 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@73c9e8e8
+[DEBUG] 2021-03-02 21:37:28.132 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@73c9e8e8
+[DEBUG] 2021-03-02 21:37:28.135 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@58ff8d79
+[DEBUG] 2021-03-02 21:37:28.136 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@58ff8d79
+[DEBUG] 2021-03-02 21:37:28.139 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@62db3891
+[DEBUG] 2021-03-02 21:37:28.139 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@62db3891
+[DEBUG] 2021-03-02 21:37:28.155 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@30364216
+[DEBUG] 2021-03-02 21:37:28.155 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@30364216
+[DEBUG] 2021-03-02 21:37:28.160 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@6a472566
+[DEBUG] 2021-03-02 21:37:28.160 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@6a472566
+[DEBUG] 2021-03-02 21:37:28.161 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@767191b1
+[DEBUG] 2021-03-02 21:37:28.162 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@767191b1
+[DEBUG] 2021-03-02 21:37:28.163 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@6a094db2
+[DEBUG] 2021-03-02 21:37:28.164 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@6a094db2
+[DEBUG] 2021-03-02 21:37:28.164 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@6a094db2
+[DEBUG] 2021-03-02 21:37:28.170 [main] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@6b2e46af
+[DEBUG] 2021-03-02 21:37:28.171 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@4047d2d9
+[DEBUG] 2021-03-02 21:37:28.172 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@4047d2d9
+[DEBUG] 2021-03-02 21:37:28.179 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@4047d2d9
+[DEBUG] 2021-03-02 21:37:28.181 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@660f0c
+[DEBUG] 2021-03-02 21:37:28.182 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@35c12c7a
+[DEBUG] 2021-03-02 21:37:28.182 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@35c12c7a
+[DEBUG] 2021-03-02 21:37:28.185 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@17f2dd85
+[DEBUG] 2021-03-02 21:37:28.185 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@17f2dd85
+[DEBUG] 2021-03-02 21:37:28.188 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@5d43409a
+[DEBUG] 2021-03-02 21:37:28.188 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@5d43409a
+[DEBUG] 2021-03-02 21:37:28.190 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@51c959a4
+[DEBUG] 2021-03-02 21:37:28.191 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@51c959a4
+[DEBUG] 2021-03-02 21:37:28.192 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@1effd53c
+[DEBUG] 2021-03-02 21:37:28.192 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@1effd53c
+[DEBUG] 2021-03-02 21:37:28.193 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@5fa23c
+[DEBUG] 2021-03-02 21:37:28.197 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@43045f9f
+[DEBUG] 2021-03-02 21:37:28.198 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@43045f9f
+[DEBUG] 2021-03-02 21:37:28.198 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@43045f9f
+[DEBUG] 2021-03-02 21:37:28.202 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@3968bc60
+[DEBUG] 2021-03-02 21:37:28.202 [main] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@3968bc60
+[DEBUG] 2021-03-02 21:37:28.202 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@3968bc60
+[DEBUG] 2021-03-02 21:37:28.204 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@21bd20ee
+[DEBUG] 2021-03-02 21:37:28.205 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@60bbacfc
+[DEBUG] 2021-03-02 21:37:28.208 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@3c5dbdf8
+[DEBUG] 2021-03-02 21:37:28.208 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@3c5dbdf8
+[DEBUG] 2021-03-02 21:37:28.208 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@3c5dbdf8
+[DEBUG] 2021-03-02 21:37:28.209 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2f5ac102
+[DEBUG] 2021-03-02 21:37:28.211 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2f5ac102
+[DEBUG] 2021-03-02 21:37:28.211 [main] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2f5ac102
+[DEBUG] 2021-03-02 21:37:28.212 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@80bfdc6
+[DEBUG] 2021-03-02 21:37:28.213 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@6981f8f3
+[DEBUG] 2021-03-02 21:37:28.214 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@46963479
+[DEBUG] 2021-03-02 21:37:28.215 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@46963479
+[DEBUG] 2021-03-02 21:37:28.215 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@55e42449
+[DEBUG] 2021-03-02 21:37:28.217 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@15400fff
+[DEBUG] 2021-03-02 21:37:28.217 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@15400fff
+[DEBUG] 2021-03-02 21:37:28.220 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@a9f023e
+[DEBUG] 2021-03-02 21:37:28.220 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@a9f023e
+[DEBUG] 2021-03-02 21:37:28.221 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@68d7a2df
+[DEBUG] 2021-03-02 21:37:28.222 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@3ed7821
+[DEBUG] 2021-03-02 21:37:28.223 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@7ceb4478
+[DEBUG] 2021-03-02 21:37:28.227 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@524a076e
+[DEBUG] 2021-03-02 21:37:28.227 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@524a076e
+[DEBUG] 2021-03-02 21:37:28.228 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6e0c6a7a
+[DEBUG] 2021-03-02 21:37:28.228 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@467b684d
+[DEBUG] 2021-03-02 21:37:28.228 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@7baf1f5a
+[DEBUG] 2021-03-02 21:37:28.228 [main] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@6cc86152
+[DEBUG] 2021-03-02 21:37:28.228 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@611a990b
+[DEBUG] 2021-03-02 21:37:28.228 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@7cbeac65
+[DEBUG] 2021-03-02 21:37:28.228 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@7fe82967
+[DEBUG] 2021-03-02 21:37:28.228 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@50850539
+[DEBUG] 2021-03-02 21:37:28.279 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2021-03-02 21:37:28.281 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2021-03-02 21:37:28.284 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2021-03-02 21:37:28.285 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2021-03-02 21:37:28.287 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2021-03-02 21:37:28.289 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2021-03-02 21:37:28.289 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2021-03-02 21:37:28.292 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2021-03-02 21:37:28.293 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2021-03-02 21:37:28.294 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2021-03-02 21:37:28.295 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2021-03-02 21:37:28.295 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2021-03-02 21:37:28.296 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2021-03-02 21:37:28.299 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[INFO ] 2021-03-02 21:37:28.319 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.cj.jdbc.Driver at URL: jdbc:mysql://localhost:3306/test_plant_collector
+[INFO ] 2021-03-02 21:37:28.319 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {password=****, user=root}
+[INFO ] 2021-03-02 21:37:28.319 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-02 21:37:28.664 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
+[DEBUG] 2021-03-02 21:37:28.930 [main] JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 8.0.22
+      major : 8
+      minor : 0
+[DEBUG] 2021-03-02 21:37:28.931 [main] JdbcEnvironmentInitiator - Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.16 (Revision: 34cbc6bc61f72836e26327537a432d6db7c77de6)
+      major : 8
+      minor : 0
+[DEBUG] 2021-03-02 21:37:28.934 [main] JdbcEnvironmentInitiator - JDBC version : 4.2
+[INFO ] 2021-03-02 21:37:29.005 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[DEBUG] 2021-03-02 21:37:29.046 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+[DEBUG] 2021-03-02 21:37:29.086 [main] IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[DEBUG] 2021-03-02 21:37:29.256 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2021-03-02 21:37:29.262 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@60bb7995] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@40fa8766]
+[DEBUG] 2021-03-02 21:37:29.395 [main] AnnotationBinder - Binding entity from annotated class: com.acuster.entity.User
+[DEBUG] 2021-03-02 21:37:29.443 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2021-03-02 21:37:29.454 [main] EntityBinder - Import with entity name User
+[DEBUG] 2021-03-02 21:37:29.461 [main] EntityBinder - Bind entity com.acuster.entity.User on table user
+[DEBUG] 2021-03-02 21:37:29.532 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.538 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2021-03-02 21:37:29.541 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.acuster.entity.User:id]
+[DEBUG] 2021-03-02 21:37:29.545 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2021-03-02 21:37:29.549 [main] PropertyBinder - Building property id
+[DEBUG] 2021-03-02 21:37:29.556 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2021-03-02 21:37:29.558 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=date_of_birth, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.559 [main] PropertyBinder - MetadataSourceProcessor property dateOfBirth with lazy=false
+[DEBUG] 2021-03-02 21:37:29.559 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.acuster.entity.User:dateOfBirth]
+[DEBUG] 2021-03-02 21:37:29.559 [main] SimpleValueBinder - building SimpleValue for dateOfBirth
+[DEBUG] 2021-03-02 21:37:29.559 [main] PropertyBinder - Building property dateOfBirth
+[DEBUG] 2021-03-02 21:37:29.560 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=first_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.561 [main] PropertyBinder - MetadataSourceProcessor property firstName with lazy=false
+[DEBUG] 2021-03-02 21:37:29.561 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.acuster.entity.User:firstName]
+[DEBUG] 2021-03-02 21:37:29.561 [main] SimpleValueBinder - building SimpleValue for firstName
+[DEBUG] 2021-03-02 21:37:29.561 [main] PropertyBinder - Building property firstName
+[DEBUG] 2021-03-02 21:37:29.561 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=last_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.562 [main] PropertyBinder - MetadataSourceProcessor property lastName with lazy=false
+[DEBUG] 2021-03-02 21:37:29.562 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.acuster.entity.User:lastName]
+[DEBUG] 2021-03-02 21:37:29.562 [main] SimpleValueBinder - building SimpleValue for lastName
+[DEBUG] 2021-03-02 21:37:29.562 [main] PropertyBinder - Building property lastName
+[DEBUG] 2021-03-02 21:37:29.564 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+[DEBUG] 2021-03-02 21:37:29.568 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=plants, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.571 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.589 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.590 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=plants_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.591 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='plants_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2021-03-02 21:37:29.597 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+[DEBUG] 2021-03-02 21:37:29.597 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+[DEBUG] 2021-03-02 21:37:29.599 [main] CollectionBinder - Collection role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:29.604 [main] PropertyBinder - Building property plants
+[DEBUG] 2021-03-02 21:37:29.606 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.606 [main] PropertyBinder - MetadataSourceProcessor property userName with lazy=false
+[DEBUG] 2021-03-02 21:37:29.606 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.acuster.entity.User:userName]
+[DEBUG] 2021-03-02 21:37:29.606 [main] SimpleValueBinder - building SimpleValue for userName
+[DEBUG] 2021-03-02 21:37:29.607 [main] PropertyBinder - Building property userName
+[DEBUG] 2021-03-02 21:37:29.607 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.607 [main] PropertyBinder - MetadataSourceProcessor property userPassword with lazy=false
+[DEBUG] 2021-03-02 21:37:29.607 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.acuster.entity.User:userPassword]
+[DEBUG] 2021-03-02 21:37:29.607 [main] SimpleValueBinder - building SimpleValue for userPassword
+[DEBUG] 2021-03-02 21:37:29.607 [main] PropertyBinder - Building property userPassword
+[DEBUG] 2021-03-02 21:37:29.607 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_points, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.607 [main] PropertyBinder - MetadataSourceProcessor property userPoints with lazy=false
+[DEBUG] 2021-03-02 21:37:29.609 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.acuster.entity.User:userPoints]
+[DEBUG] 2021-03-02 21:37:29.609 [main] SimpleValueBinder - building SimpleValue for userPoints
+[DEBUG] 2021-03-02 21:37:29.609 [main] PropertyBinder - Building property userPoints
+[DEBUG] 2021-03-02 21:37:29.610 [main] AnnotationBinder - Binding entity from annotated class: com.acuster.entity.Plant
+[DEBUG] 2021-03-02 21:37:29.611 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2021-03-02 21:37:29.612 [main] EntityBinder - Import with entity name Plant
+[DEBUG] 2021-03-02 21:37:29.613 [main] EntityBinder - Bind entity com.acuster.entity.Plant on table plant
+[DEBUG] 2021-03-02 21:37:29.616 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(plant), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.617 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2021-03-02 21:37:29.617 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.acuster.entity.Plant:id]
+[DEBUG] 2021-03-02 21:37:29.617 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2021-03-02 21:37:29.617 [main] PropertyBinder - Building property id
+[DEBUG] 2021-03-02 21:37:29.618 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2021-03-02 21:37:29.618 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(plant), mappingColumn=plant_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.618 [main] PropertyBinder - MetadataSourceProcessor property plantName with lazy=false
+[DEBUG] 2021-03-02 21:37:29.618 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.acuster.entity.Plant:plantName]
+[DEBUG] 2021-03-02 21:37:29.618 [main] SimpleValueBinder - building SimpleValue for plantName
+[DEBUG] 2021-03-02 21:37:29.618 [main] PropertyBinder - Building property plantName
+[DEBUG] 2021-03-02 21:37:29.619 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2021-03-02 21:37:29.619 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(plant), mappingColumn=user, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-03-02 21:37:29.624 [main] PropertyBinder - Building property user
+[DEBUG] 2021-03-02 21:37:29.626 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2021-03-02 21:37:29.627 [main] SimpleValueBinder - Starting fillSimpleValue for dateOfBirth
+[DEBUG] 2021-03-02 21:37:29.627 [main] SimpleValueBinder - Starting fillSimpleValue for firstName
+[DEBUG] 2021-03-02 21:37:29.627 [main] SimpleValueBinder - Starting fillSimpleValue for lastName
+[DEBUG] 2021-03-02 21:37:29.627 [main] SimpleValueBinder - Starting fillSimpleValue for userName
+[DEBUG] 2021-03-02 21:37:29.627 [main] SimpleValueBinder - Starting fillSimpleValue for userPassword
+[DEBUG] 2021-03-02 21:37:29.627 [main] SimpleValueBinder - Starting fillSimpleValue for userPoints
+[DEBUG] 2021-03-02 21:37:29.627 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2021-03-02 21:37:29.627 [main] SimpleValueBinder - Starting fillSimpleValue for plantName
+[DEBUG] 2021-03-02 21:37:29.637 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [user]
+[DEBUG] 2021-03-02 21:37:29.638 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [plant]
+[DEBUG] 2021-03-02 21:37:29.638 [main] CollectionSecondPass - Second pass for collection: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:29.639 [main] CollectionBinder - Binding a OneToMany: com.acuster.entity.User.plants through a foreign key
+[DEBUG] 2021-03-02 21:37:29.644 [main] CollectionBinder - Mapping collection: com.acuster.entity.User.plants -> plant
+[DEBUG] 2021-03-02 21:37:29.646 [main] TableBinder - Retrieving property com.acuster.entity.Plant.user
+[DEBUG] 2021-03-02 21:37:29.646 [main] CollectionSecondPass - Mapped collection key: user_id, one-to-many: com.acuster.entity.Plant
+[DEBUG] 2021-03-02 21:37:29.647 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.acuster.entity.User
+[DEBUG] 2021-03-02 21:37:29.663 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.acuster.entity.User
+[DEBUG] 2021-03-02 21:37:29.740 [main] SessionFactoryImpl - Building session factory
+[DEBUG] 2021-03-02 21:37:29.741 [main] Settings - SessionFactory name : null
+[DEBUG] 2021-03-02 21:37:29.741 [main] Settings - Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2021-03-02 21:37:29.742 [main] Settings - Automatic session close at end of transaction: disabled
+[DEBUG] 2021-03-02 21:37:29.742 [main] Settings - Statistics: disabled
+[DEBUG] 2021-03-02 21:37:29.742 [main] Settings - Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2021-03-02 21:37:29.742 [main] Settings - Default entity-mode: pojo
+[DEBUG] 2021-03-02 21:37:29.742 [main] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2021-03-02 21:37:29.742 [main] Settings - Allow initialization of lazy state outside session : disabled
+[DEBUG] 2021-03-02 21:37:29.742 [main] Settings - Using BatchFetchStyle : LEGACY
+[DEBUG] 2021-03-02 21:37:29.742 [main] Settings - Default batch fetch size: -1
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - Maximum outer join fetch depth: 2
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - Default null ordering: NONE
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - Order SQL updates by primary key: disabled
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - Order SQL inserts for batching: disabled
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - multi-tenancy strategy : NONE
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - JTA Track by Thread: enabled
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - Query language substitutions: {}
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - Named query checking : enabled
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - Second-level cache: disabled
+[DEBUG] 2021-03-02 21:37:29.743 [main] Settings - Second-level query cache: disabled
+[DEBUG] 2021-03-02 21:37:29.744 [main] Settings - Second-level query cache factory: null
+[DEBUG] 2021-03-02 21:37:29.744 [main] Settings - Second-level cache region prefix: null
+[DEBUG] 2021-03-02 21:37:29.744 [main] Settings - Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2021-03-02 21:37:29.750 [main] Settings - Structured second-level cache entries: disabled
+[DEBUG] 2021-03-02 21:37:29.750 [main] Settings - Second-level cache direct-reference entries: disabled
+[DEBUG] 2021-03-02 21:37:29.750 [main] Settings - Automatic eviction of collection cache: disabled
+[DEBUG] 2021-03-02 21:37:29.750 [main] Settings - JDBC batch size: 15
+[DEBUG] 2021-03-02 21:37:29.750 [main] Settings - JDBC batch updates for versioned data: enabled
+[DEBUG] 2021-03-02 21:37:29.750 [main] Settings - Scrollable result sets: enabled
+[DEBUG] 2021-03-02 21:37:29.750 [main] Settings - Wrap result sets: disabled
+[DEBUG] 2021-03-02 21:37:29.750 [main] Settings - JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2021-03-02 21:37:29.751 [main] Settings - JDBC result set fetch size: null
+[DEBUG] 2021-03-02 21:37:29.751 [main] Settings - Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2021-03-02 21:37:29.751 [main] Settings - Generate SQL with comments: disabled
+[DEBUG] 2021-03-02 21:37:29.751 [main] Settings - JPA compliance - query : 
+[DEBUG] 2021-03-02 21:37:29.751 [main] Settings - JPA compliance - closed-handling : 
+[DEBUG] 2021-03-02 21:37:29.751 [main] Settings - JPA compliance - lists : 
+[DEBUG] 2021-03-02 21:37:29.751 [main] Settings - JPA compliance - transactions : 
+[INFO ] 2021-03-02 21:37:29.902 [main] beans - HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+[DEBUG] 2021-03-02 21:37:29.947 [main] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2021-03-02 21:37:29.951 [main] SessionFactoryImpl - Instantiating session factory with properties: {gopherProxySet=false, awt.toolkit=sun.lwawt.macosx.LWCToolkit, java.specification.version=11, sun.cpu.isalist=, hibernate.c3p0.idle_test_period=3000, sun.jnu.encoding=UTF-8, hibernate.c3p0.min_size=5, java.class.path=/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar:/Applications/IntelliJ IDEA.app/Contents/plugins/junit/lib/junit5-rt.jar:/Applications/IntelliJ IDEA.app/Contents/plugins/junit/lib/junit-rt.jar:/Users/amber/IdeaProjects/plantParentHelper/target/test-classes:/Users/amber/IdeaProjects/plantParentHelper/target/classes:/Users/amber/.m2/repository/org/junit/platform/junit-platform-runner/1.0.0/junit-platform-runner-1.0.0.jar:/Users/amber/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/amber/.m2/repository/org/junit/platform/junit-platform-launcher/1.0.0/junit-platform-launcher-1.0.0.jar:/Users/amber/.m2/repository/org/junit/platform/junit-platform-suite-api/1.0.0/junit-platform-suite-api-1.0.0.jar:/Users/amber/.m2/repository/org/junit/platform/junit-platform-commons/1.0.0/junit-platform-commons-1.0.0.jar:/Users/amber/.m2/repository/org/junit/vintage/junit-vintage-engine/4.12.0/junit-vintage-engine-4.12.0.jar:/Users/amber/.m2/repository/org/junit/platform/junit-platform-engine/1.0.0/junit-platform-engine-1.0.0.jar:/Users/amber/.m2/repository/org/opentest4j/opentest4j/1.0.0/opentest4j-1.0.0.jar:/Users/amber/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.0.0/junit-jupiter-engine-5.0.0.jar:/Users/amber/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.0.0/junit-jupiter-api-5.0.0.jar:/Users/amber/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/amber/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/amber/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar:/Users/amber/.m2/repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar:/Users/amber/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar:/Users/amber/.m2/repository/javax/servlet/jsp/jstl/jstl-api/1.2/jstl-api-1.2.jar:/Users/amber/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/amber/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar:/Users/amber/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/Users/amber/.m2/repository/taglibs/standard/1.1.2/standard-1.1.2.jar:/Users/amber/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/Users/amber/.m2/repository/org/apache/logging/log4j/log4j-core/2.10.0/log4j-core-2.10.0.jar:/Users/amber/.m2/repository/org/hibernate/hibernate-core/5.4.4.Final/hibernate-core-5.4.4.Final.jar:/Users/amber/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/Users/amber/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/Users/amber/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar:/Users/amber/.m2/repository/net/bytebuddy/byte-buddy/1.9.11/byte-buddy-1.9.11.jar:/Users/amber/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/amber/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/Users/amber/.m2/repository/org/jboss/jandex/2.0.5.Final/jandex-2.0.5.Final.jar:/Users/amber/.m2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar:/Users/amber/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/amber/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/Users/amber/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final.jar:/Users/amber/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/amber/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/Users/amber/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/Users/amber/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/Users/amber/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/Users/amber/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar:/Users/amber/.m2/repository/org/hibernate/hibernate-c3p0/5.4.4.Final/hibernate-c3p0-5.4.4.Final.jar:/Users/amber/.m2/repository/com/mchange/c3p0/0.9.5.3/c3p0-0.9.5.3.jar:/Users/amber/.m2/repository/com/mchange/mchange-commons-java/0.2.15/mchange-commons-java-0.2.15.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, java.vendor.url=https://openjdk.java.net/, user.timezone=America/Chicago, os.name=Mac OS X, java.vm.specification.version=11, sun.java.launcher=SUN_STANDARD, user.country=US, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home/lib, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 com.acuster.persistence.UserDaoTest, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, jdk.debug=release, sun.cpu.endian=little, user.home=/Users/amber, hibernate.c3p0.max_statements=50, user.language=en, java.specification.vendor=Oracle Corporation, java.version.date=2020-10-20, java.home=/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home, file.separator=/, java.vm.compressedOopsMode=Zero based, line.separator=
+, hibernate.c3p0.timeout=300, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, connection.password=catsrule, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, hibernate.c3p0.max_size=20, java.runtime.version=11.0.9+7-LTS, user.name=amber, path.separator=:, hibernate.connection.username=****, os.version=10.15.7, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/test_plant_collector, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, java.vendor.version=18.9, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=/var/folders/0j/_6m1dygx2clgd055rv1qhdwh0000gp/T/, java.version=11.0.9, user.dir=/Users/amber/IdeaProjects/plantParentHelper, os.arch=x86_64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, hibernate.connection.password=****, sun.os.patch.level=unknown, connection.driver_class=com.mysql.cj.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@4f281aaf, java.library.path=/Users/amber/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=11.0.9+7-LTS, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeBig, connection.url=jdbc:mysql://localhost:3306/test_plant_collector, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.class.version=55.0}
+[DEBUG] 2021-03-02 21:37:30.014 [main] TypeSafeActivator - Unable to acquire Bean Validation ValidatorFactory, skipping activation
+[DEBUG] 2021-03-02 21:37:30.015 [main] JaccIntegrator - Skipping JACC integration as it was not enabled
+[DEBUG] 2021-03-02 21:37:30.017 [main] SessionFactoryImpl - Instantiated session factory
+[DEBUG] 2021-03-02 21:37:30.017 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@60bb7995] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@3cc053]
+[DEBUG] 2021-03-02 21:37:30.637 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.acuster.entity.Plant] is safe
+[DEBUG] 2021-03-02 21:37:30.637 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.acuster.entity.Plant
+[DEBUG] 2021-03-02 21:37:30.703 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.acuster.entity.Plant] is safe
+[DEBUG] 2021-03-02 21:37:30.704 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.acuster.entity.Plant
+[DEBUG] 2021-03-02 21:37:31.692 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.acuster.entity.User] is safe
+[DEBUG] 2021-03-02 21:37:31.693 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.acuster.entity.User
+[DEBUG] 2021-03-02 21:37:31.694 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.acuster.entity.User] is safe
+[DEBUG] 2021-03-02 21:37:31.695 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.acuster.entity.User
+[DEBUG] 2021-03-02 21:37:31.804 [main] AbstractCollectionPersister - Static SQL for collection: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:31.805 [main] AbstractCollectionPersister -  Row insert: update plant set user_id=? where id=?
+[DEBUG] 2021-03-02 21:37:31.805 [main] AbstractCollectionPersister -  Row update: update plant set  where id=?
+[DEBUG] 2021-03-02 21:37:31.805 [main] AbstractCollectionPersister -  Row delete: update plant set user_id=null where user_id=? and id=?
+[DEBUG] 2021-03-02 21:37:31.805 [main] AbstractCollectionPersister -  One-shot delete: update plant set user_id=null where user_id=?
+[DEBUG] 2021-03-02 21:37:31.812 [main] AbstractEntityPersister - Static SQL for entity: com.acuster.entity.Plant
+[DEBUG] 2021-03-02 21:37:31.812 [main] AbstractEntityPersister -  Version select: select id from plant where id =?
+[DEBUG] 2021-03-02 21:37:31.812 [main] AbstractEntityPersister -  Snapshot select: select plant_.id, plant_.plant_name as plant_na2_0_, plant_.user_id as user_id3_0_ from plant plant_ where plant_.id=?
+[DEBUG] 2021-03-02 21:37:31.812 [main] AbstractEntityPersister -  Insert 0: insert into plant (plant_name, user_id, id) values (?, ?, ?)
+[DEBUG] 2021-03-02 21:37:31.812 [main] AbstractEntityPersister -  Update 0: update plant set plant_name=?, user_id=? where id=?
+[DEBUG] 2021-03-02 21:37:31.812 [main] AbstractEntityPersister -  Delete 0: delete from plant where id=?
+[DEBUG] 2021-03-02 21:37:31.812 [main] AbstractEntityPersister -  Identity insert: insert into plant (plant_name, user_id) values (?, ?)
+[DEBUG] 2021-03-02 21:37:31.873 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@130a6eb9]
+[DEBUG] 2021-03-02 21:37:31.876 [main] MetamodelGraphWalker - Visiting attribute path : plantName
+[DEBUG] 2021-03-02 21:37:31.876 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-03-02 21:37:31.880 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@49b89425]
+[DEBUG] 2021-03-02 21:37:31.884 [main] MetamodelGraphWalker - Visiting attribute path : user.dateOfBirth
+[DEBUG] 2021-03-02 21:37:31.884 [main] MetamodelGraphWalker - Visiting attribute path : user.firstName
+[DEBUG] 2021-03-02 21:37:31.884 [main] MetamodelGraphWalker - Visiting attribute path : user.lastName
+[DEBUG] 2021-03-02 21:37:31.884 [main] MetamodelGraphWalker - Visiting attribute path : user.plants
+[DEBUG] 2021-03-02 21:37:31.884 [main] MetamodelGraphWalker - Property path deemed to be circular : user.plants
+[DEBUG] 2021-03-02 21:37:31.885 [main] MetamodelGraphWalker - Visiting attribute path : user.userName
+[DEBUG] 2021-03-02 21:37:31.885 [main] MetamodelGraphWalker - Visiting attribute path : user.userPassword
+[DEBUG] 2021-03-02 21:37:31.885 [main] MetamodelGraphWalker - Visiting attribute path : user.userPoints
+[DEBUG] 2021-03-02 21:37:31.885 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 21:37:31.904 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 21:37:31.912 [main] LoadPlanTreePrinter - LoadPlan(entity=com.acuster.entity.Plant)
+    - Returns
+       - EntityReturnImpl(entity=com.acuster.entity.Plant, querySpaceUid=<gen:0>, path=com.acuster.entity.Plant)
+          - EntityAttributeFetchImpl(entity=com.acuster.entity.User, querySpaceUid=<gen:1>, path=com.acuster.entity.Plant.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.acuster.entity.Plant)
+          - SQL table alias mapping - plant0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.acuster.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+[DEBUG] 2021-03-02 21:37:31.915 [main] EntityLoader - Static select for entity com.acuster.entity.Plant [NONE]: select plant0_.id as id1_0_0_, plant0_.plant_name as plant_na2_0_0_, plant0_.user_id as user_id3_0_0_, user1_.id as id1_1_1_, user1_.date_of_birth as date_of_2_1_1_, user1_.first_name as first_na3_1_1_, user1_.last_name as last_nam4_1_1_, user1_.user_name as user_nam5_1_1_, user1_.user_password as user_pas6_1_1_, user1_.user_points as user_poi7_1_1_ from plant plant0_ left outer join user user1_ on plant0_.user_id=user1_.id where plant0_.id=?
+[DEBUG] 2021-03-02 21:37:31.915 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@58c42c8c]
+[DEBUG] 2021-03-02 21:37:31.915 [main] MetamodelGraphWalker - Visiting attribute path : plantName
+[DEBUG] 2021-03-02 21:37:31.916 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-03-02 21:37:31.916 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@23564dd2]
+[DEBUG] 2021-03-02 21:37:31.916 [main] MetamodelGraphWalker - Visiting attribute path : user.dateOfBirth
+[DEBUG] 2021-03-02 21:37:31.916 [main] MetamodelGraphWalker - Visiting attribute path : user.firstName
+[DEBUG] 2021-03-02 21:37:31.916 [main] MetamodelGraphWalker - Visiting attribute path : user.lastName
+[DEBUG] 2021-03-02 21:37:31.916 [main] MetamodelGraphWalker - Visiting attribute path : user.plants
+[DEBUG] 2021-03-02 21:37:31.916 [main] MetamodelGraphWalker - Property path deemed to be circular : user.plants
+[DEBUG] 2021-03-02 21:37:31.916 [main] MetamodelGraphWalker - Visiting attribute path : user.userName
+[DEBUG] 2021-03-02 21:37:31.916 [main] MetamodelGraphWalker - Visiting attribute path : user.userPassword
+[DEBUG] 2021-03-02 21:37:31.916 [main] MetamodelGraphWalker - Visiting attribute path : user.userPoints
+[DEBUG] 2021-03-02 21:37:31.917 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 21:37:31.917 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 21:37:31.918 [main] LoadPlanTreePrinter - LoadPlan(entity=com.acuster.entity.Plant)
+    - Returns
+       - EntityReturnImpl(entity=com.acuster.entity.Plant, querySpaceUid=<gen:0>, path=com.acuster.entity.Plant)
+          - EntityAttributeFetchImpl(entity=com.acuster.entity.User, querySpaceUid=<gen:1>, path=com.acuster.entity.Plant.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.acuster.entity.Plant)
+          - SQL table alias mapping - plant0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.acuster.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+[DEBUG] 2021-03-02 21:37:31.918 [main] EntityLoader - Static select for entity com.acuster.entity.Plant [READ]: select plant0_.id as id1_0_0_, plant0_.plant_name as plant_na2_0_0_, plant0_.user_id as user_id3_0_0_, user1_.id as id1_1_1_, user1_.date_of_birth as date_of_2_1_1_, user1_.first_name as first_na3_1_1_, user1_.last_name as last_nam4_1_1_, user1_.user_name as user_nam5_1_1_, user1_.user_password as user_pas6_1_1_, user1_.user_points as user_poi7_1_1_ from plant plant0_ left outer join user user1_ on plant0_.user_id=user1_.id where plant0_.id=?
+[DEBUG] 2021-03-02 21:37:31.938 [main] Loader - Static select for action ACTION_MERGE on entity com.acuster.entity.Plant: select plant0_.id as id1_0_0_, plant0_.plant_name as plant_na2_0_0_, plant0_.user_id as user_id3_0_0_ from plant plant0_ where plant0_.id=?
+[DEBUG] 2021-03-02 21:37:31.939 [main] Loader - Static select for action ACTION_REFRESH on entity com.acuster.entity.Plant: select plant0_.id as id1_0_0_, plant0_.plant_name as plant_na2_0_0_, plant0_.user_id as user_id3_0_0_ from plant plant0_ where plant0_.id=?
+[DEBUG] 2021-03-02 21:37:31.940 [main] AbstractEntityPersister - Static SQL for entity: com.acuster.entity.User
+[DEBUG] 2021-03-02 21:37:31.940 [main] AbstractEntityPersister -  Version select: select id from user where id =?
+[DEBUG] 2021-03-02 21:37:31.940 [main] AbstractEntityPersister -  Snapshot select: select user_.id, user_.date_of_birth as date_of_2_1_, user_.first_name as first_na3_1_, user_.last_name as last_nam4_1_, user_.user_name as user_nam5_1_, user_.user_password as user_pas6_1_, user_.user_points as user_poi7_1_ from user user_ where user_.id=?
+[DEBUG] 2021-03-02 21:37:31.940 [main] AbstractEntityPersister -  Insert 0: insert into user (date_of_birth, first_name, last_name, user_name, user_password, user_points, id) values (?, ?, ?, ?, ?, ?, ?)
+[DEBUG] 2021-03-02 21:37:31.940 [main] AbstractEntityPersister -  Update 0: update user set date_of_birth=?, first_name=?, last_name=?, user_name=?, user_password=?, user_points=? where id=?
+[DEBUG] 2021-03-02 21:37:31.940 [main] AbstractEntityPersister -  Delete 0: delete from user where id=?
+[DEBUG] 2021-03-02 21:37:31.940 [main] AbstractEntityPersister -  Identity insert: insert into user (date_of_birth, first_name, last_name, user_name, user_password, user_points) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2021-03-02 21:37:31.941 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@17176b18]
+[DEBUG] 2021-03-02 21:37:31.941 [main] MetamodelGraphWalker - Visiting attribute path : dateOfBirth
+[DEBUG] 2021-03-02 21:37:31.941 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2021-03-02 21:37:31.941 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2021-03-02 21:37:31.941 [main] MetamodelGraphWalker - Visiting attribute path : plants
+[DEBUG] 2021-03-02 21:37:31.943 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6c9a3661]
+[DEBUG] 2021-03-02 21:37:31.947 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@b5d9f1e]
+[DEBUG] 2021-03-02 21:37:31.949 [main] MetamodelGraphWalker - Visiting attribute path : plants.plantName
+[DEBUG] 2021-03-02 21:37:31.949 [main] MetamodelGraphWalker - Visiting attribute path : plants.user
+[DEBUG] 2021-03-02 21:37:31.949 [main] MetamodelGraphWalker - Property path deemed to be circular : plants.user
+[DEBUG] 2021-03-02 21:37:31.951 [main] MetamodelGraphWalker - Visiting attribute path : userName
+[DEBUG] 2021-03-02 21:37:31.951 [main] MetamodelGraphWalker - Visiting attribute path : userPassword
+[DEBUG] 2021-03-02 21:37:31.951 [main] MetamodelGraphWalker - Visiting attribute path : userPoints
+[DEBUG] 2021-03-02 21:37:31.951 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 21:37:31.951 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 21:37:31.955 [main] LoadPlanTreePrinter - LoadPlan(entity=com.acuster.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=com.acuster.entity.User, querySpaceUid=<gen:0>, path=com.acuster.entity.User)
+          - CollectionAttributeFetchImpl(collection=com.acuster.entity.User.plants, querySpaceUid=<gen:1>, path=com.acuster.entity.User.plants)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.acuster.entity.Plant, querySpaceUid=<gen:2>, path=com.acuster.entity.User.plants.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.acuster.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(plants)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=com.acuster.entity.User.plants)
+                - SQL table alias mapping - plants1_
+                - alias suffix - 1_
+                - suffixed key columns - {user_id3_0_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.acuster.entity.Plant)
+                      - SQL table alias mapping - plants1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+[DEBUG] 2021-03-02 21:37:31.955 [main] EntityLoader - Static select for entity com.acuster.entity.User [NONE]: select user0_.id as id1_1_0_, user0_.date_of_birth as date_of_2_1_0_, user0_.first_name as first_na3_1_0_, user0_.last_name as last_nam4_1_0_, user0_.user_name as user_nam5_1_0_, user0_.user_password as user_pas6_1_0_, user0_.user_points as user_poi7_1_0_, plants1_.user_id as user_id3_0_1_, plants1_.id as id1_0_1_, plants1_.id as id1_0_2_, plants1_.plant_name as plant_na2_0_2_, plants1_.user_id as user_id3_0_2_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:31.955 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3b218c74]
+[DEBUG] 2021-03-02 21:37:31.955 [main] MetamodelGraphWalker - Visiting attribute path : dateOfBirth
+[DEBUG] 2021-03-02 21:37:31.956 [main] MetamodelGraphWalker - Visiting attribute path : firstName
+[DEBUG] 2021-03-02 21:37:31.956 [main] MetamodelGraphWalker - Visiting attribute path : lastName
+[DEBUG] 2021-03-02 21:37:31.956 [main] MetamodelGraphWalker - Visiting attribute path : plants
+[DEBUG] 2021-03-02 21:37:31.956 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@42c54bad]
+[DEBUG] 2021-03-02 21:37:31.956 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6bb4cc0e]
+[DEBUG] 2021-03-02 21:37:31.956 [main] MetamodelGraphWalker - Visiting attribute path : plants.plantName
+[DEBUG] 2021-03-02 21:37:31.956 [main] MetamodelGraphWalker - Visiting attribute path : plants.user
+[DEBUG] 2021-03-02 21:37:31.956 [main] MetamodelGraphWalker - Property path deemed to be circular : plants.user
+[DEBUG] 2021-03-02 21:37:31.956 [main] MetamodelGraphWalker - Visiting attribute path : userName
+[DEBUG] 2021-03-02 21:37:31.956 [main] MetamodelGraphWalker - Visiting attribute path : userPassword
+[DEBUG] 2021-03-02 21:37:31.956 [main] MetamodelGraphWalker - Visiting attribute path : userPoints
+[DEBUG] 2021-03-02 21:37:31.956 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 21:37:31.957 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 21:37:31.958 [main] LoadPlanTreePrinter - LoadPlan(entity=com.acuster.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=com.acuster.entity.User, querySpaceUid=<gen:0>, path=com.acuster.entity.User)
+          - CollectionAttributeFetchImpl(collection=com.acuster.entity.User.plants, querySpaceUid=<gen:1>, path=com.acuster.entity.User.plants)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.acuster.entity.Plant, querySpaceUid=<gen:2>, path=com.acuster.entity.User.plants.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.acuster.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(plants)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=com.acuster.entity.User.plants)
+                - SQL table alias mapping - plants1_
+                - alias suffix - 1_
+                - suffixed key columns - {user_id3_0_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.acuster.entity.Plant)
+                      - SQL table alias mapping - plants1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+
+[DEBUG] 2021-03-02 21:37:31.960 [main] EntityLoader - Static select for entity com.acuster.entity.User [READ]: select user0_.id as id1_1_0_, user0_.date_of_birth as date_of_2_1_0_, user0_.first_name as first_na3_1_0_, user0_.last_name as last_nam4_1_0_, user0_.user_name as user_nam5_1_0_, user0_.user_password as user_pas6_1_0_, user0_.user_points as user_poi7_1_0_, plants1_.user_id as user_id3_0_1_, plants1_.id as id1_0_1_, plants1_.id as id1_0_2_, plants1_.plant_name as plant_na2_0_2_, plants1_.user_id as user_id3_0_2_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:31.962 [main] Loader - Static select for action ACTION_MERGE on entity com.acuster.entity.User: select user0_.id as id1_1_1_, user0_.date_of_birth as date_of_2_1_1_, user0_.first_name as first_na3_1_1_, user0_.last_name as last_nam4_1_1_, user0_.user_name as user_nam5_1_1_, user0_.user_password as user_pas6_1_1_, user0_.user_points as user_poi7_1_1_, plants1_.user_id as user_id3_0_3_, plants1_.id as id1_0_3_, plants1_.id as id1_0_0_, plants1_.plant_name as plant_na2_0_0_, plants1_.user_id as user_id3_0_0_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:31.967 [main] Loader - Static select for action ACTION_REFRESH on entity com.acuster.entity.User: select user0_.id as id1_1_1_, user0_.date_of_birth as date_of_2_1_1_, user0_.first_name as first_na3_1_1_, user0_.last_name as last_nam4_1_1_, user0_.user_name as user_nam5_1_1_, user0_.user_password as user_pas6_1_1_, user0_.user_points as user_poi7_1_1_, plants1_.user_id as user_id3_0_3_, plants1_.id as id1_0_3_, plants1_.id as id1_0_0_, plants1_.plant_name as plant_na2_0_0_, plants1_.user_id as user_id3_0_0_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:31.981 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@57c69937]
+[DEBUG] 2021-03-02 21:37:31.982 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1ad1c363]
+[DEBUG] 2021-03-02 21:37:31.982 [main] MetamodelGraphWalker - Visiting attribute path : plantName
+[DEBUG] 2021-03-02 21:37:31.985 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-03-02 21:37:31.985 [main] MetamodelGraphWalker - Property path deemed to be circular : user
+[DEBUG] 2021-03-02 21:37:31.986 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-03-02 21:37:31.991 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-03-02 21:37:31.992 [main] LoadPlanTreePrinter - LoadPlan(collection=com.acuster.entity.User.plants)
+    - Returns
+       - CollectionReturnImpl(collection=com.acuster.entity.User.plants, querySpaceUid=<gen:0>, path=[com.acuster.entity.User.plants])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.acuster.entity.Plant, querySpaceUid=<gen:1>, path=[com.acuster.entity.User.plants].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.acuster.entity.User.plants)
+          - SQL table alias mapping - plants0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id3_0_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.acuster.entity.Plant)
+                - SQL table alias mapping - plants0_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+[DEBUG] 2021-03-02 21:37:31.993 [main] CollectionLoader - Static select for collection com.acuster.entity.User.plants: select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:32.108 [main] SchemaManagementToolCoordinator - No actions specified; doing nothing
+[DEBUG] 2021-03-02 21:37:32.108 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2021-03-02 21:37:32.109 [main] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2021-03-02 21:37:32.121 [main] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2021-03-02 21:37:32.121 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2021-03-02 21:37:32.123 [main] NamedQueryRepository - Checking 0 named HQL queries
+[DEBUG] 2021-03-02 21:37:32.123 [main] NamedQueryRepository - Checking 0 named SQL queries
+[DEBUG] 2021-03-02 21:37:32.126 [main] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@27358a19
+[DEBUG] 2021-03-02 21:37:32.129 [main] SessionFactoryRegistry - Registering SessionFactory: 6525cc2a-fa2f-43cd-a70e-b591c0742b8f (<unnamed>)
+[DEBUG] 2021-03-02 21:37:32.130 [main] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2021-03-02 21:37:32.272 [main] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2021-03-02 21:37:32.320 [main] SQL - select user0_.id as id1_1_0_, user0_.date_of_birth as date_of_2_1_0_, user0_.first_name as first_na3_1_0_, user0_.last_name as last_nam4_1_0_, user0_.user_name as user_nam5_1_0_, user0_.user_password as user_pas6_1_0_, user0_.user_points as user_poi7_1_0_, plants1_.user_id as user_id3_0_1_, plants1_.id as id1_0_1_, plants1_.id as id1_0_2_, plants1_.plant_name as plant_na2_0_2_, plants1_.user_id as user_id3_0_2_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:32.357 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:32.359 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-03-02 21:37:32.381 [main] CollectionReferenceInitializerImpl - Result set contains (possibly empty) collection: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:32.401 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:32.403 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1947-11-11
+[DEBUG] 2021-03-02 21:37:32.403 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.404 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Barney
+[DEBUG] 2021-03-02 21:37:32.404 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.404 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Curry
+[DEBUG] 2021-03-02 21:37:32.404 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.404 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:32.404 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.405 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-03-02 21:37:32.405 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.405 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret3
+[DEBUG] 2021-03-02 21:37:32.405 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.405 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 200
+[DEBUG] 2021-03-02 21:37:32.405 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.407 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:32.408 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:32.413 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:32.414 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:32.415 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:32.415 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.acuster.entity.User#3
+[DEBUG] 2021-03-02 21:37:32.416 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:32.429 [main] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2021-03-02 21:37:32.429 [main] TransactionImpl - begin
+[DEBUG] 2021-03-02 21:37:32.452 [main] TransactionImpl - committing
+[DEBUG] 2021-03-02 21:37:32.453 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2021-03-02 21:37:32.453 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2021-03-02 21:37:32.462 [main] Collections - Collection dereferenced: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:32.463 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+[DEBUG] 2021-03-02 21:37:32.463 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 1 removals to 1 collections
+[DEBUG] 2021-03-02 21:37:32.465 [main] EntityPrinter - Listing entities:
+[DEBUG] 2021-03-02 21:37:32.466 [main] EntityPrinter - com.acuster.entity.User{firstName=Barney, lastName=Curry, userPassword=supersecret3, userPoints=200, plants=[], dateOfBirth=1947-11-11, id=3, userName=bcurry}
+[DEBUG] 2021-03-02 21:37:32.475 [main] SQL - delete from user where id=?
+[DEBUG] 2021-03-02 21:37:32.485 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:32.487 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:32.488 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+[DEBUG] 2021-03-02 21:37:32.488 [main] SQL - select user0_.id as id1_1_0_, user0_.date_of_birth as date_of_2_1_0_, user0_.first_name as first_na3_1_0_, user0_.last_name as last_nam4_1_0_, user0_.user_name as user_nam5_1_0_, user0_.user_password as user_pas6_1_0_, user0_.user_points as user_poi7_1_0_, plants1_.user_id as user_id3_0_1_, plants1_.id as id1_0_1_, plants1_.id as id1_0_2_, plants1_.plant_name as plant_na2_0_2_, plants1_.user_id as user_id3_0_2_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:32.493 [main] CollectionLoadContext - No collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:32.494 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:32.495 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.acuster.entity.User#3
+[DEBUG] 2021-03-02 21:37:32.495 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:32.586 [main] SQL - select user0_.id as id1_1_0_, user0_.date_of_birth as date_of_2_1_0_, user0_.first_name as first_na3_1_0_, user0_.last_name as last_nam4_1_0_, user0_.user_name as user_nam5_1_0_, user0_.user_password as user_pas6_1_0_, user0_.user_points as user_poi7_1_0_, plants1_.user_id as user_id3_0_1_, plants1_.id as id1_0_1_, plants1_.id as id1_0_2_, plants1_.plant_name as plant_na2_0_2_, plants1_.user_id as user_id3_0_2_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:32.589 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:32.590 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-03-02 21:37:32.590 [main] CollectionReferenceInitializerImpl - Result set contains (possibly empty) collection: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:32.591 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:32.591 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1947-11-11
+[DEBUG] 2021-03-02 21:37:32.591 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.591 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Barney
+[DEBUG] 2021-03-02 21:37:32.591 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.591 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Curry
+[DEBUG] 2021-03-02 21:37:32.591 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.591 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:32.592 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.592 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-03-02 21:37:32.592 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.592 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret3
+[DEBUG] 2021-03-02 21:37:32.592 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.592 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 200
+[DEBUG] 2021-03-02 21:37:32.592 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:32.593 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:32.593 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:32.593 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:32.593 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:32.594 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:32.594 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.acuster.entity.User#3
+[DEBUG] 2021-03-02 21:37:32.594 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:32.963 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from User as generatedAlias0 where generatedAlias0.lastName like :param0
+[DEBUG] 2021-03-02 21:37:33.002 [main] QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@bd273b2
+[DEBUG] 2021-03-02 21:37:33.155 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.acuster.entity.User as generatedAlias0 where generatedAlias0.lastName like :param0
+[DEBUG] 2021-03-02 21:37:33.190 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 21:37:33.220 [main] QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[IDENT] Node: 'com'
+    |  |     |  |  |  \-[IDENT] Node: 'acuster'
+    |  |     |  |  \-[IDENT] Node: 'entity'
+    |  |     |  \-[IDENT] Node: 'User'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[LIKE] Node: 'like'
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'lastName'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+[DEBUG] 2021-03-02 21:37:33.374 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2021-03-02 21:37:33.406 [main] FromElement - FromClause{level=1} : com.acuster.entity.User (generatedAlias0) -> user0_
+[DEBUG] 2021-03-02 21:37:33.408 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-03-02 21:37:33.418 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-03-02 21:37:33.421 [main] DotNode - getDataType() : lastName -> org.hibernate.type.StringType@6917bb4
+[DEBUG] 2021-03-02 21:37:33.423 [main] FromReferenceNode - Resolved : generatedAlias0.lastName -> user0_.last_name
+[DEBUG] 2021-03-02 21:37:33.428 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2021-03-02 21:37:33.428 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} user0_.id ) ( FromClause{level=1} user user0_ ) ( where ( like ( user0_.last_name user0_.id lastName ) ? ) ) )
+[DEBUG] 2021-03-02 21:37:33.448 [main] JoinProcessor - Using FROM fragment [user user0_]
+[DEBUG] 2021-03-02 21:37:33.448 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2021-03-02 21:37:33.449 [main] QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (user)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'user0_.id as id1_1_' {alias=generatedAlias0, className=com.acuster.entity.User, tableAlias=user0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'user user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=user,tableAlias=user0_,origin=null,columns={,className=com.acuster.entity.User}}
+    \-[WHERE] SqlNode: 'where'
+       \-[LIKE] BinaryLogicOperatorNode: 'like'
+          +-[DOT] DotNode: 'user0_.last_name' {propertyName=lastName,dereferenceType=PRIMITIVE,getPropertyPath=lastName,path=generatedAlias0.lastName,tableAlias=user0_,className=com.acuster.entity.User,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'user0_.id' {alias=generatedAlias0, className=com.acuster.entity.User, tableAlias=user0_}
+          |  \-[IDENT] IdentNode: 'lastName' {originalText=lastName}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@6917bb4}
+
+[DEBUG] 2021-03-02 21:37:33.449 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 21:37:33.462 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.acuster.entity.User as generatedAlias0 where generatedAlias0.lastName like :param0
+[DEBUG] 2021-03-02 21:37:33.462 [main] QueryTranslatorImpl - SQL: select user0_.id as id1_1_, user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_ from user user0_ where user0_.last_name like ?
+[DEBUG] 2021-03-02 21:37:33.462 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 21:37:33.507 [main] SQL - select user0_.id as id1_1_, user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_ from user user0_ where user0_.last_name like ?
+[DEBUG] 2021-03-02 21:37:33.513 [main] Loader - Result set row: 0
+[DEBUG] 2021-03-02 21:37:33.513 [main] Loader - Result row: EntityKey[com.acuster.entity.User#1]
+[DEBUG] 2021-03-02 21:37:33.514 [main] Loader - Result set row: 1
+[DEBUG] 2021-03-02 21:37:33.515 [main] Loader - Result row: EntityKey[com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:33.516 [main] Loader - Result set row: 2
+[DEBUG] 2021-03-02 21:37:33.516 [main] Loader - Result row: EntityKey[com.acuster.entity.User#4]
+[DEBUG] 2021-03-02 21:37:33.516 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#1]
+[DEBUG] 2021-03-02 21:37:33.517 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1964-04-01
+[DEBUG] 2021-03-02 21:37:33.517 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.517 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Joe
+[DEBUG] 2021-03-02 21:37:33.517 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.517 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Coyne
+[DEBUG] 2021-03-02 21:37:33.517 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.517 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:33.517 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.518 [main] TwoPhaseLoad - Processing attribute `userName` : value = jcoyne
+[DEBUG] 2021-03-02 21:37:33.518 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.518 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret1
+[DEBUG] 2021-03-02 21:37:33.518 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.518 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 750
+[DEBUG] 2021-03-02 21:37:33.520 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#1]
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1947-11-11
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Barney
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Curry
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.521 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret3
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 200
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#4]
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1986-07-08
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Karen
+[DEBUG] 2021-03-02 21:37:33.522 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Mack
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Processing attribute `userName` : value = kmack
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret4
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 325
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.523 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#4]
+[DEBUG] 2021-03-02 21:37:33.528 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:33.528 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:33.531 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:33.531 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:33.532 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:33.533 [main] ResultSetProcessorImpl - Starting ResultSet row #1
+[DEBUG] 2021-03-02 21:37:33.533 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#5]
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Satin Pothos
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Processing attribute `user` : value = 4
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#5]
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#7]
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Goldfish Plant
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.534 [main] TwoPhaseLoad - Processing attribute `user` : value = 4
+[DEBUG] 2021-03-02 21:37:33.535 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.535 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#7]
+[DEBUG] 2021-03-02 21:37:33.535 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:33.535 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:33.535 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:33.535 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:33.535 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:33.536 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:33.536 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:33.538 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:33.538 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:33.538 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:33.538 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:33.538 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:33.539 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:33.539 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:33.539 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:33.542 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:33.542 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:33.543 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:33.543 [main] ResultSetProcessorImpl - Starting ResultSet row #1
+[DEBUG] 2021-03-02 21:37:33.544 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:33.544 [main] ResultSetProcessorImpl - Starting ResultSet row #2
+[DEBUG] 2021-03-02 21:37:33.545 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#1]
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Golden Pothos
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Processing attribute `user` : value = 1
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#1]
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#4]
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Monstera
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Processing attribute `user` : value = 1
+[DEBUG] 2021-03-02 21:37:33.546 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.547 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#4]
+[DEBUG] 2021-03-02 21:37:33.547 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#6]
+[DEBUG] 2021-03-02 21:37:33.547 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Golden Pothos
+[DEBUG] 2021-03-02 21:37:33.547 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.547 [main] TwoPhaseLoad - Processing attribute `user` : value = 1
+[DEBUG] 2021-03-02 21:37:33.547 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.547 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#6]
+[DEBUG] 2021-03-02 21:37:33.547 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:33.547 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:33.547 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:33.548 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:33.548 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:33.550 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:33.808 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from User as generatedAlias0 where generatedAlias0.lastName=:param0
+[DEBUG] 2021-03-02 21:37:33.809 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.acuster.entity.User as generatedAlias0 where generatedAlias0.lastName=:param0
+[DEBUG] 2021-03-02 21:37:33.811 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 21:37:33.812 [main] QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[IDENT] Node: 'com'
+    |  |     |  |  |  \-[IDENT] Node: 'acuster'
+    |  |     |  |  \-[IDENT] Node: 'entity'
+    |  |     |  \-[IDENT] Node: 'User'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'lastName'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+[DEBUG] 2021-03-02 21:37:33.812 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2021-03-02 21:37:33.813 [main] FromElement - FromClause{level=1} : com.acuster.entity.User (generatedAlias0) -> user0_
+[DEBUG] 2021-03-02 21:37:33.813 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-03-02 21:37:33.813 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-03-02 21:37:33.813 [main] DotNode - getDataType() : lastName -> org.hibernate.type.StringType@6917bb4
+[DEBUG] 2021-03-02 21:37:33.814 [main] FromReferenceNode - Resolved : generatedAlias0.lastName -> user0_.last_name
+[DEBUG] 2021-03-02 21:37:33.814 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2021-03-02 21:37:33.814 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} user0_.id ) ( FromClause{level=1} user user0_ ) ( where ( = ( user0_.last_name user0_.id lastName ) ? ) ) )
+[DEBUG] 2021-03-02 21:37:33.815 [main] JoinProcessor - Using FROM fragment [user user0_]
+[DEBUG] 2021-03-02 21:37:33.815 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2021-03-02 21:37:33.815 [main] QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (user)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'user0_.id as id1_1_' {alias=generatedAlias0, className=com.acuster.entity.User, tableAlias=user0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'user user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=user,tableAlias=user0_,origin=null,columns={,className=com.acuster.entity.User}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'user0_.last_name' {propertyName=lastName,dereferenceType=PRIMITIVE,getPropertyPath=lastName,path=generatedAlias0.lastName,tableAlias=user0_,className=com.acuster.entity.User,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'user0_.id' {alias=generatedAlias0, className=com.acuster.entity.User, tableAlias=user0_}
+          |  \-[IDENT] IdentNode: 'lastName' {originalText=lastName}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@6917bb4}
+
+[DEBUG] 2021-03-02 21:37:33.816 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 21:37:33.816 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.acuster.entity.User as generatedAlias0 where generatedAlias0.lastName=:param0
+[DEBUG] 2021-03-02 21:37:33.816 [main] QueryTranslatorImpl - SQL: select user0_.id as id1_1_, user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_ from user user0_ where user0_.last_name=?
+[DEBUG] 2021-03-02 21:37:33.816 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 21:37:33.816 [main] SQL - select user0_.id as id1_1_, user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_ from user user0_ where user0_.last_name=?
+[DEBUG] 2021-03-02 21:37:33.820 [main] Loader - Result set row: 0
+[DEBUG] 2021-03-02 21:37:33.820 [main] Loader - Result row: EntityKey[com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1947-11-11
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Barney
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Curry
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-03-02 21:37:33.821 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.822 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret3
+[DEBUG] 2021-03-02 21:37:33.822 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.822 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 200
+[DEBUG] 2021-03-02 21:37:33.822 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:33.822 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:33.822 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:33.822 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:33.827 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:33.828 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:33.828 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:33.828 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:33.828 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:33.828 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:33.828 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:33.992 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from User as generatedAlias0 where generatedAlias0.lastName like :param0
+[DEBUG] 2021-03-02 21:37:33.993 [main] SQL - select user0_.id as id1_1_, user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_ from user user0_ where user0_.last_name like ?
+[DEBUG] 2021-03-02 21:37:34.015 [main] Loader - Result set row: 0
+[DEBUG] 2021-03-02 21:37:34.015 [main] Loader - Result row: EntityKey[com.acuster.entity.User#1]
+[DEBUG] 2021-03-02 21:37:34.017 [main] Loader - Result set row: 1
+[DEBUG] 2021-03-02 21:37:34.017 [main] Loader - Result row: EntityKey[com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.017 [main] Loader - Result set row: 2
+[DEBUG] 2021-03-02 21:37:34.018 [main] Loader - Result row: EntityKey[com.acuster.entity.User#4]
+[DEBUG] 2021-03-02 21:37:34.019 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#1]
+[DEBUG] 2021-03-02 21:37:34.019 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1964-04-01
+[DEBUG] 2021-03-02 21:37:34.019 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.019 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Joe
+[DEBUG] 2021-03-02 21:37:34.019 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.019 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Coyne
+[DEBUG] 2021-03-02 21:37:34.019 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.021 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.021 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Processing attribute `userName` : value = jcoyne
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret1
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 750
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#1]
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1947-11-11
+[DEBUG] 2021-03-02 21:37:34.022 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Barney
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Curry
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret3
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 200
+[DEBUG] 2021-03-02 21:37:34.023 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#4]
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1986-07-08
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Karen
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Mack
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Processing attribute `userName` : value = kmack
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret4
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 325
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.024 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#4]
+[DEBUG] 2021-03-02 21:37:34.025 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.025 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:34.028 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.029 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:34.030 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.031 [main] ResultSetProcessorImpl - Starting ResultSet row #1
+[DEBUG] 2021-03-02 21:37:34.033 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.033 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#5]
+[DEBUG] 2021-03-02 21:37:34.033 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Satin Pothos
+[DEBUG] 2021-03-02 21:37:34.033 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.033 [main] TwoPhaseLoad - Processing attribute `user` : value = 4
+[DEBUG] 2021-03-02 21:37:34.033 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.034 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#5]
+[DEBUG] 2021-03-02 21:37:34.035 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#7]
+[DEBUG] 2021-03-02 21:37:34.035 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Goldfish Plant
+[DEBUG] 2021-03-02 21:37:34.035 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.035 [main] TwoPhaseLoad - Processing attribute `user` : value = 4
+[DEBUG] 2021-03-02 21:37:34.035 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.036 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#7]
+[DEBUG] 2021-03-02 21:37:34.036 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.036 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.036 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.036 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.036 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:34.037 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.037 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:34.039 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.039 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.039 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.039 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.039 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.039 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:34.040 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.040 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:34.042 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.042 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:34.042 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.043 [main] ResultSetProcessorImpl - Starting ResultSet row #1
+[DEBUG] 2021-03-02 21:37:34.043 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.043 [main] ResultSetProcessorImpl - Starting ResultSet row #2
+[DEBUG] 2021-03-02 21:37:34.047 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.049 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#1]
+[DEBUG] 2021-03-02 21:37:34.049 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Golden Pothos
+[DEBUG] 2021-03-02 21:37:34.049 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.049 [main] TwoPhaseLoad - Processing attribute `user` : value = 1
+[DEBUG] 2021-03-02 21:37:34.049 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.050 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#1]
+[DEBUG] 2021-03-02 21:37:34.050 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#4]
+[DEBUG] 2021-03-02 21:37:34.050 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Monstera
+[DEBUG] 2021-03-02 21:37:34.050 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.050 [main] TwoPhaseLoad - Processing attribute `user` : value = 1
+[DEBUG] 2021-03-02 21:37:34.050 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.051 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#4]
+[DEBUG] 2021-03-02 21:37:34.051 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#6]
+[DEBUG] 2021-03-02 21:37:34.051 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Golden Pothos
+[DEBUG] 2021-03-02 21:37:34.051 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.051 [main] TwoPhaseLoad - Processing attribute `user` : value = 1
+[DEBUG] 2021-03-02 21:37:34.051 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.051 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#6]
+[DEBUG] 2021-03-02 21:37:34.052 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.052 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.052 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.053 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.053 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:34.053 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:34.367 [main] SQL - select user0_.id as id1_1_0_, user0_.date_of_birth as date_of_2_1_0_, user0_.first_name as first_na3_1_0_, user0_.last_name as last_nam4_1_0_, user0_.user_name as user_nam5_1_0_, user0_.user_password as user_pas6_1_0_, user0_.user_points as user_poi7_1_0_, plants1_.user_id as user_id3_0_1_, plants1_.id as id1_0_1_, plants1_.id as id1_0_2_, plants1_.plant_name as plant_na2_0_2_, plants1_.user_id as user_id3_0_2_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:34.374 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:34.375 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-03-02 21:37:34.376 [main] CollectionReferenceInitializerImpl - Result set contains (possibly empty) collection: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1947-11-11
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Barney
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Curry
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-03-02 21:37:34.377 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.378 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret3
+[DEBUG] 2021-03-02 21:37:34.378 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.378 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 200
+[DEBUG] 2021-03-02 21:37:34.378 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.379 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.379 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.379 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.379 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.379 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.379 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.acuster.entity.User#3
+[DEBUG] 2021-03-02 21:37:34.380 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:34.385 [main] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2021-03-02 21:37:34.385 [main] TransactionImpl - begin
+[DEBUG] 2021-03-02 21:37:34.390 [main] TransactionImpl - committing
+[DEBUG] 2021-03-02 21:37:34.390 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2021-03-02 21:37:34.391 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2021-03-02 21:37:34.393 [main] Collections - Collection found: [com.acuster.entity.User.plants#3], was: [com.acuster.entity.User.plants#3] (initialized)
+[DEBUG] 2021-03-02 21:37:34.394 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+[DEBUG] 2021-03-02 21:37:34.394 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[DEBUG] 2021-03-02 21:37:34.394 [main] EntityPrinter - Listing entities:
+[DEBUG] 2021-03-02 21:37:34.395 [main] EntityPrinter - com.acuster.entity.User{firstName=Barney, lastName=Davis, userPassword=supersecret3, userPoints=200, plants=[], dateOfBirth=1947-11-11, id=3, userName=bcurry}
+[DEBUG] 2021-03-02 21:37:34.398 [main] SQL - update user set date_of_birth=?, first_name=?, last_name=?, user_name=?, user_password=?, user_points=? where id=?
+[DEBUG] 2021-03-02 21:37:34.411 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:34.415 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:34.416 [main] SQL - select user0_.id as id1_1_0_, user0_.date_of_birth as date_of_2_1_0_, user0_.first_name as first_na3_1_0_, user0_.last_name as last_nam4_1_0_, user0_.user_name as user_nam5_1_0_, user0_.user_password as user_pas6_1_0_, user0_.user_points as user_poi7_1_0_, plants1_.user_id as user_id3_0_1_, plants1_.id as id1_0_1_, plants1_.id as id1_0_2_, plants1_.plant_name as plant_na2_0_2_, plants1_.user_id as user_id3_0_2_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:34.421 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:34.422 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-03-02 21:37:34.423 [main] CollectionReferenceInitializerImpl - Result set contains (possibly empty) collection: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1947-11-11
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Barney
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Davis
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.423 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-03-02 21:37:34.424 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.424 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret3
+[DEBUG] 2021-03-02 21:37:34.424 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.424 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 200
+[DEBUG] 2021-03-02 21:37:34.424 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.424 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.424 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.424 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.424 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.424 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.425 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.acuster.entity.User#3
+[DEBUG] 2021-03-02 21:37:34.425 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:34.683 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from User as generatedAlias0
+[DEBUG] 2021-03-02 21:37:34.684 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.acuster.entity.User as generatedAlias0
+[DEBUG] 2021-03-02 21:37:34.686 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 21:37:34.687 [main] QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'from'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[DOT] Node: '.'
+       |     |  |  +-[DOT] Node: '.'
+       |     |  |  |  +-[IDENT] Node: 'com'
+       |     |  |  |  \-[IDENT] Node: 'acuster'
+       |     |  |  \-[IDENT] Node: 'entity'
+       |     |  \-[IDENT] Node: 'User'
+       |     \-[ALIAS] Node: 'generatedAlias0'
+       \-[SELECT] Node: 'select'
+          \-[IDENT] Node: 'generatedAlias0'
+
+[DEBUG] 2021-03-02 21:37:34.687 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2021-03-02 21:37:34.688 [main] FromElement - FromClause{level=1} : com.acuster.entity.User (generatedAlias0) -> user0_
+[DEBUG] 2021-03-02 21:37:34.688 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-03-02 21:37:34.688 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2021-03-02 21:37:34.689 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} user0_.id ) ( FromClause{level=1} user user0_ ) )
+[DEBUG] 2021-03-02 21:37:34.689 [main] JoinProcessor - Using FROM fragment [user user0_]
+[DEBUG] 2021-03-02 21:37:34.689 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2021-03-02 21:37:34.690 [main] QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (user)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'user0_.id as id1_1_' {alias=generatedAlias0, className=com.acuster.entity.User, tableAlias=user0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'user user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=user,tableAlias=user0_,origin=null,columns={,className=com.acuster.entity.User}}
+
+[DEBUG] 2021-03-02 21:37:34.690 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 21:37:34.690 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.acuster.entity.User as generatedAlias0
+[DEBUG] 2021-03-02 21:37:34.690 [main] QueryTranslatorImpl - SQL: select user0_.id as id1_1_, user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_ from user user0_
+[DEBUG] 2021-03-02 21:37:34.690 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-03-02 21:37:34.691 [main] SQL - select user0_.id as id1_1_, user0_.date_of_birth as date_of_2_1_, user0_.first_name as first_na3_1_, user0_.last_name as last_nam4_1_, user0_.user_name as user_nam5_1_, user0_.user_password as user_pas6_1_, user0_.user_points as user_poi7_1_ from user user0_
+[DEBUG] 2021-03-02 21:37:34.695 [main] Loader - Result set row: 0
+[DEBUG] 2021-03-02 21:37:34.695 [main] Loader - Result row: EntityKey[com.acuster.entity.User#1]
+[DEBUG] 2021-03-02 21:37:34.696 [main] Loader - Result set row: 1
+[DEBUG] 2021-03-02 21:37:34.696 [main] Loader - Result row: EntityKey[com.acuster.entity.User#2]
+[DEBUG] 2021-03-02 21:37:34.696 [main] Loader - Result set row: 2
+[DEBUG] 2021-03-02 21:37:34.696 [main] Loader - Result row: EntityKey[com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.697 [main] Loader - Result set row: 3
+[DEBUG] 2021-03-02 21:37:34.697 [main] Loader - Result row: EntityKey[com.acuster.entity.User#4]
+[DEBUG] 2021-03-02 21:37:34.698 [main] Loader - Result set row: 4
+[DEBUG] 2021-03-02 21:37:34.698 [main] Loader - Result row: EntityKey[com.acuster.entity.User#5]
+[DEBUG] 2021-03-02 21:37:34.698 [main] Loader - Result set row: 5
+[DEBUG] 2021-03-02 21:37:34.699 [main] Loader - Result row: EntityKey[com.acuster.entity.User#6]
+[DEBUG] 2021-03-02 21:37:34.699 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#1]
+[DEBUG] 2021-03-02 21:37:34.699 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1964-04-01
+[DEBUG] 2021-03-02 21:37:34.699 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.699 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Joe
+[DEBUG] 2021-03-02 21:37:34.699 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.699 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Coyne
+[DEBUG] 2021-03-02 21:37:34.699 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.699 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.699 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Processing attribute `userName` : value = jcoyne
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret1
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 750
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#1]
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#2]
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1988-05-08
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Fred
+[DEBUG] 2021-03-02 21:37:34.700 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.701 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Hensen
+[DEBUG] 2021-03-02 21:37:34.701 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.701 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.701 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.701 [main] TwoPhaseLoad - Processing attribute `userName` : value = fhensen
+[DEBUG] 2021-03-02 21:37:34.701 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret2
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 25
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#2]
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1947-11-11
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Barney
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Curry
+[DEBUG] 2021-03-02 21:37:34.702 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret3
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 200
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#3]
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#4]
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1986-07-08
+[DEBUG] 2021-03-02 21:37:34.703 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Karen
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Mack
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Processing attribute `userName` : value = kmack
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret4
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 325
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.704 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#4]
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#5]
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1991-09-22
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Dianne
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Klein
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Processing attribute `userName` : value = dklein
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret5
+[DEBUG] 2021-03-02 21:37:34.705 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.706 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 75
+[DEBUG] 2021-03-02 21:37:34.706 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.706 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#5]
+[DEBUG] 2021-03-02 21:37:34.706 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#6]
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1979-08-30
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Dawn
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Tillman
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Processing attribute `userName` : value = dtillman
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.707 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = supersecret6
+[DEBUG] 2021-03-02 21:37:34.708 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.708 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 1000
+[DEBUG] 2021-03-02 21:37:34.708 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.708 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#6]
+[DEBUG] 2021-03-02 21:37:34.708 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#6]
+[DEBUG] 2021-03-02 21:37:34.708 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:34.713 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#6]
+[DEBUG] 2021-03-02 21:37:34.713 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.714 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#6]
+[DEBUG] 2021-03-02 21:37:34.714 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.714 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.714 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:34.714 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#5]
+[DEBUG] 2021-03-02 21:37:34.714 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:34.716 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#5]
+[DEBUG] 2021-03-02 21:37:34.716 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.716 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#5]
+[DEBUG] 2021-03-02 21:37:34.716 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.716 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.717 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:34.717 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.717 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:34.719 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.719 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:34.719 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.719 [main] ResultSetProcessorImpl - Starting ResultSet row #1
+[DEBUG] 2021-03-02 21:37:34.720 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.720 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#5]
+[DEBUG] 2021-03-02 21:37:34.720 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Satin Pothos
+[DEBUG] 2021-03-02 21:37:34.720 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.720 [main] TwoPhaseLoad - Processing attribute `user` : value = 4
+[DEBUG] 2021-03-02 21:37:34.720 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.720 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#5]
+[DEBUG] 2021-03-02 21:37:34.720 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#7]
+[DEBUG] 2021-03-02 21:37:34.721 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Goldfish Plant
+[DEBUG] 2021-03-02 21:37:34.721 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.721 [main] TwoPhaseLoad - Processing attribute `user` : value = 4
+[DEBUG] 2021-03-02 21:37:34.721 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.721 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#7]
+[DEBUG] 2021-03-02 21:37:34.721 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.721 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#4]
+[DEBUG] 2021-03-02 21:37:34.721 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.721 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.721 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:34.722 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.722 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:34.723 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.724 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.724 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#3]
+[DEBUG] 2021-03-02 21:37:34.724 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.724 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.724 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:34.724 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#2]
+[DEBUG] 2021-03-02 21:37:34.724 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:34.726 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#2]
+[DEBUG] 2021-03-02 21:37:34.726 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:34.727 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#2]
+[DEBUG] 2021-03-02 21:37:34.727 [main] ResultSetProcessorImpl - Starting ResultSet row #1
+[DEBUG] 2021-03-02 21:37:34.727 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#2]
+[DEBUG] 2021-03-02 21:37:34.728 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#2]
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Jade Plant
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Processing attribute `user` : value = 2
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#2]
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#3]
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Monstera
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Processing attribute `user` : value = 2
+[DEBUG] 2021-03-02 21:37:34.729 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.730 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#3]
+[DEBUG] 2021-03-02 21:37:34.730 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.730 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#2]
+[DEBUG] 2021-03-02 21:37:34.730 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.730 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.730 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:34.730 [main] AbstractLoadPlanBasedCollectionInitializer - Loading collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.730 [main] SQL - select plants0_.user_id as user_id3_0_0_, plants0_.id as id1_0_0_, plants0_.id as id1_0_1_, plants0_.plant_name as plant_na2_0_1_, plants0_.user_id as user_id3_0_1_ from plant plants0_ where plants0_.user_id=?
+[DEBUG] 2021-03-02 21:37:34.732 [main] ResultSetProcessorImpl - Preparing collection initializer : [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.733 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:34.733 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.734 [main] ResultSetProcessorImpl - Starting ResultSet row #1
+[DEBUG] 2021-03-02 21:37:34.734 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.735 [main] ResultSetProcessorImpl - Starting ResultSet row #2
+[DEBUG] 2021-03-02 21:37:34.735 [main] CollectionReferenceInitializerImpl - Found row of collection: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.735 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#1]
+[DEBUG] 2021-03-02 21:37:34.735 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Golden Pothos
+[DEBUG] 2021-03-02 21:37:34.735 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.735 [main] TwoPhaseLoad - Processing attribute `user` : value = 1
+[DEBUG] 2021-03-02 21:37:34.735 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.735 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#1]
+[DEBUG] 2021-03-02 21:37:34.735 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#4]
+[DEBUG] 2021-03-02 21:37:34.735 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Monstera
+[DEBUG] 2021-03-02 21:37:34.735 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.736 [main] TwoPhaseLoad - Processing attribute `user` : value = 1
+[DEBUG] 2021-03-02 21:37:34.736 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.736 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#4]
+[DEBUG] 2021-03-02 21:37:34.736 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.Plant#6]
+[DEBUG] 2021-03-02 21:37:34.736 [main] TwoPhaseLoad - Processing attribute `plantName` : value = Golden Pothos
+[DEBUG] 2021-03-02 21:37:34.736 [main] TwoPhaseLoad - Attribute (`plantName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.736 [main] TwoPhaseLoad - Processing attribute `user` : value = 1
+[DEBUG] 2021-03-02 21:37:34.736 [main] TwoPhaseLoad - Attribute (`user`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.736 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.Plant#6]
+[DEBUG] 2021-03-02 21:37:34.736 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.736 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#1]
+[DEBUG] 2021-03-02 21:37:34.736 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.739 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.739 [main] AbstractLoadPlanBasedCollectionInitializer - Done loading collection
+[DEBUG] 2021-03-02 21:37:34.739 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:34.920 [main] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2021-03-02 21:37:34.921 [main] TransactionImpl - begin
+[DEBUG] 2021-03-02 21:37:34.930 [main] ActionQueue - Executing identity-insert immediately
+[DEBUG] 2021-03-02 21:37:34.932 [main] SQL - insert into user (date_of_birth, first_name, last_name, user_name, user_password, user_points) values (?, ?, ?, ?, ?, ?)
+[DEBUG] 2021-03-02 21:37:34.941 [main] IdentifierGeneratorHelper - Natively generated identity: 8
+[DEBUG] 2021-03-02 21:37:34.941 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.942 [main] TransactionImpl - committing
+[DEBUG] 2021-03-02 21:37:34.942 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2021-03-02 21:37:34.942 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2021-03-02 21:37:34.943 [main] Collections - Collection found: [com.acuster.entity.User.plants#8], was: [<unreferenced>] (initialized)
+[DEBUG] 2021-03-02 21:37:34.943 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[DEBUG] 2021-03-02 21:37:34.943 [main] AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+[DEBUG] 2021-03-02 21:37:34.943 [main] EntityPrinter - Listing entities:
+[DEBUG] 2021-03-02 21:37:34.943 [main] EntityPrinter - com.acuster.entity.User{firstName=Fred, lastName=Flintstone, userPassword=yabbadabbadoo, userPoints=0, plants=[], dateOfBirth=1968-01-01, id=8, userName=fflintstone}
+[DEBUG] 2021-03-02 21:37:34.945 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:34.946 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-03-02 21:37:34.950 [main] SQL - select user0_.id as id1_1_0_, user0_.date_of_birth as date_of_2_1_0_, user0_.first_name as first_na3_1_0_, user0_.last_name as last_nam4_1_0_, user0_.user_name as user_nam5_1_0_, user0_.user_password as user_pas6_1_0_, user0_.user_points as user_poi7_1_0_, plants1_.user_id as user_id3_0_1_, plants1_.id as id1_0_1_, plants1_.id as id1_0_2_, plants1_.plant_name as plant_na2_0_2_, plants1_.user_id as user_id3_0_2_ from user user0_ left outer join plant plants1_ on user0_.id=plants1_.user_id where user0_.id=?
+[DEBUG] 2021-03-02 21:37:34.953 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-03-02 21:37:34.953 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-03-02 21:37:34.954 [main] CollectionReferenceInitializerImpl - Result set contains (possibly empty) collection: [com.acuster.entity.User.plants#8]
+[DEBUG] 2021-03-02 21:37:34.954 [main] TwoPhaseLoad - Resolving attributes for [com.acuster.entity.User#8]
+[DEBUG] 2021-03-02 21:37:34.954 [main] TwoPhaseLoad - Processing attribute `dateOfBirth` : value = 1968-01-01
+[DEBUG] 2021-03-02 21:37:34.954 [main] TwoPhaseLoad - Attribute (`dateOfBirth`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Processing attribute `firstName` : value = Fred
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Attribute (`firstName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Processing attribute `lastName` : value = Flintstone
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Attribute (`lastName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Processing attribute `plants` : value = NOT NULL COLLECTION
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Attribute (`plants`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Processing attribute `userName` : value = fflintstone
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Processing attribute `userPassword` : value = yabbadabbadoo
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Attribute (`userPassword`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Processing attribute `userPoints` : value = 0
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Attribute (`userPoints`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-03-02 21:37:34.955 [main] TwoPhaseLoad - Done materializing entity [com.acuster.entity.User#8]
+[DEBUG] 2021-03-02 21:37:34.955 [main] CollectionLoadContext - 1 collections were found in result set for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.955 [main] CollectionLoadContext - Collection fully initialized: [com.acuster.entity.User.plants#8]
+[DEBUG] 2021-03-02 21:37:34.956 [main] CollectionLoadContext - 1 collections initialized for role: com.acuster.entity.User.plants
+[DEBUG] 2021-03-02 21:37:34.956 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-03-02 21:37:34.956 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.acuster.entity.User#8
+[DEBUG] 2021-03-02 21:37:34.956 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction

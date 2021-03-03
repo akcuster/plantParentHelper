@@ -1,5 +1,6 @@
-delete from user;
 delete from plant;
+delete from user;
+
 
 INSERT INTO user VALUES (1,'jcoyne','supersecret1','Joe','Coyne','1964-04-01', 750)
         ,(2,'fhensen','supersecret2','Fred','Hensen','1988-05-08', 25)
