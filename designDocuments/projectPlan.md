@@ -21,7 +21,7 @@
 - [ ] Add application flow to design documents
 - [ ] Create Home Page template
 - [ ] Deploy application to AWS
-- [ ] Weekly Reflection
+- [x] Weekly Reflection
 - [x] Check-point 1 (behind schedule)
 
 ### Week 7
@@ -37,7 +37,7 @@
 - [ ] ViewUserProfile servlet
 - [ ] userProfile jsp
 - [ ] Weekly reflection
-- [ ] Check-point 2
+- [x] Check-point 2
 
 ### Week 8
 - [ ] Research REST APIs for project
