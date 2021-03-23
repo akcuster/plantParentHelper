@@ -43,9 +43,6 @@ public class User {
     @Column(name = "user_points")
     private int userPoints;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Plant> plants = new HashSet<>();
-
     /**
      * Instantiates a new User.
      */
@@ -210,43 +207,6 @@ public class User {
         return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
     }
 
-    /**
-     * Get plants.
-     *
-     * @return the plants
-     */
-    public Set<Plant> getPlants() {
-        return plants;
-    }
-
-    /**
-     * Sets plants.
-     *
-     * @param plants the orders
-     */
-    public void setPlants(Set<Plant> plants) {
-        this.plants = plants;
-    }
-
-    /**
-     * Add plant.
-     *
-     * @param plant the plant
-     */
-    public void addPlant(Plant plant) {
-        plants.add(plant);
-        plant.setUser((this));
-    }
-
-    /**
-     * Remove plant.
-     *
-     * @param plant the order
-     */
-    public void removePlant(Plant plant) {
-        plants.remove(plant);
-        plant.setUser(null);
-    }
 
     @Override
     public boolean equals(Object o) {

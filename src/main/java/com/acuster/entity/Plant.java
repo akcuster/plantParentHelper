@@ -22,15 +22,11 @@ public class Plant {
     @Column(name = "plant_name")
     private String plantName;
 
-    @ManyToOne
-    private User user;
-
     public Plant() {
     }
 
-    public Plant(String plantName, User user) {
+    public Plant(String plantName) {
         this.plantName = plantName;
-        this.user = user;
     }
 
     public int getId() {
@@ -49,27 +45,18 @@ public class Plant {
         this.plantName = plantName;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Plant plant = (Plant) o;
         return id == plant.id &&
-                Objects.equals(plantName, plant.plantName) &&
-                Objects.equals(user, plant.user);
+                Objects.equals(plantName, plant.plantName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, plantName, user);
+        return Objects.hash(id, plantName);
     }
 
     @Override
@@ -77,7 +64,6 @@ public class Plant {
         return "Plant{" +
                 "id=" + id +
                 ", plantName='" + plantName + '\'' +
-                ", user=" + user +
                 '}';
     }
 }
