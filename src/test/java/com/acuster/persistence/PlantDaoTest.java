@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * The type Plant dao test.
  */
-class PlantaDaoTest {
+class PlantDaoTest {
 
     GenericDao genericDao;
 
