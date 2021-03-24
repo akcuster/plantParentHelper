@@ -42,7 +42,7 @@ class PlantDaoTest {
     }
 
     /**
-     * Verifies a Plant is returned correctly base on id search.
+     * Verifies a Plant is returned correctly based on id search.
      */
     @Test
     void getPlantsByIdSuccess() {
@@ -57,13 +57,10 @@ class PlantDaoTest {
      */
     @Test
     void insertSuccess() {
-        GenericDao userDao = new GenericDao(User.class);
-        User user = (User)userDao.getById(1);
-        Plant newPlant = new Plant("Jade Plant", user);
+        Plant newPlant = new Plant("Jade Plant");
         int id = genericDao.insert(newPlant);
         assertNotEquals(0, id);
         Plant insertedPlant = (Plant)genericDao.getById(id);
-        assertNotNull(insertedPlant.getUser());
         assertEquals(newPlant, insertedPlant);
     }
 
