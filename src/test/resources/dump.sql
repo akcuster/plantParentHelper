@@ -25,10 +25,7 @@ DROP TABLE IF EXISTS `plant`;
 CREATE TABLE `plant` (
   `id` int NOT NULL AUTO_INCREMENT,
   `plant_name` varchar(50) NOT NULL,
-  `user_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `plant_user_id_fk` (`user_id`),
-  CONSTRAINT `plant_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -42,6 +39,37 @@ LOCK TABLES `plant` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `plant_task`
+--
+
+DROP TABLE IF EXISTS `plant_task`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `plant_task` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_plant_id` int NOT NULL,
+  `task_id` int DEFAULT NULL,
+  `frequency` int DEFAULT NULL,
+  `last_completed` date DEFAULT NULL,
+  `next_due` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `task_id___fk` (`task_id`),
+  KEY `user_plant_id___fk` (`user_plant_id`),
+  CONSTRAINT `task_id___fk` FOREIGN KEY (`task_id`) REFERENCES `task` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `user_plant_id___fk` FOREIGN KEY (`user_plant_id`) REFERENCES `user_plant` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `plant_task`
+--
+
+LOCK TABLES `plant_task` WRITE;
+/*!40000 ALTER TABLE `plant_task` DISABLE KEYS */;
+/*!40000 ALTER TABLE `plant_task` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `role`
 --
 
@@ -50,11 +78,11 @@ DROP TABLE IF EXISTS `role`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `role` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `role_name` varchar(25) DEFAULT NULL,
+  `role_name` varchar(25) NOT NULL,
   `user_name` varchar(15) NOT NULL,
   `user_id` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +91,32 @@ CREATE TABLE `role` (
 
 LOCK TABLES `role` WRITE;
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
+INSERT INTO `role` VALUES (1,'admin','jcoyne',1);
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `task`
+--
+
+DROP TABLE IF EXISTS `task`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `task` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `task_name` varchar(25) NOT NULL,
+  `task_points` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `task`
+--
+
+LOCK TABLES `task` WRITE;
+/*!40000 ALTER TABLE `task` DISABLE KEYS */;
+/*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -94,6 +147,35 @@ LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `user_plant`
+--
+
+DROP TABLE IF EXISTS `user_plant`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user_plant` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `plant_id` int NOT NULL,
+  `date_acquired` date NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `plant_id___fk` (`plant_id`),
+  KEY `user_id___fk` (`user_id`),
+  CONSTRAINT `plant_id___fk` FOREIGN KEY (`plant_id`) REFERENCES `plant` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `user_id___fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_plant`
+--
+
+LOCK TABLES `user_plant` WRITE;
+/*!40000 ALTER TABLE `user_plant` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_plant` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -104,4 +186,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-07 19:41:36
+-- Dump completed on 2021-03-23 22:10:47
