@@ -3,7 +3,9 @@ package com.acuster.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * A class to represent a plant.
@@ -21,6 +23,9 @@ public class Plant {
 
     @Column(name = "plant_name")
     private String plantName;
+
+    @OneToMany(mappedBy = "plant")
+    private Set<UserPlant> users = new HashSet<>();
 
     public Plant() {
     }

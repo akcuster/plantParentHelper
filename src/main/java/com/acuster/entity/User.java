@@ -43,6 +43,9 @@ public class User {
     @Column(name = "user_points")
     private int userPoints;
 
+    @OneToMany (mappedBy = "user")
+    private Set<UserPlant> userPlant;
+
     /**
      * Instantiates a new User.
      */
