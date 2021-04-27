@@ -74,3 +74,8 @@
 [DEBUG] 2021-03-02 22:22:29.650 [main] GenericDao - Searching for: c
 [DEBUG] 2021-03-02 22:22:30.139 [main] GenericDao - Searching for entity with lastName = Curry
 [DEBUG] 2021-03-02 22:22:30.266 [main] GenericDao - Searching for entity with lastName = c
+[DEBUG] 2021-03-23 22:16:46.642 [main] GenericDao - Searching for entity with plantName = Golden Pothos
+[DEBUG] 2021-03-23 22:16:47.025 [main] GenericDao - Searching for entity with plantName = p
+[DEBUG] 2021-03-23 22:17:18.592 [main] GenericDao - Searching for: c
+[DEBUG] 2021-03-23 22:17:19.039 [main] GenericDao - Searching for entity with lastName = Curry
+[DEBUG] 2021-03-23 22:17:19.178 [main] GenericDao - Searching for entity with lastName = c

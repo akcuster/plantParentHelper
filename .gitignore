@@ -33,7 +33,7 @@
 
 # Maven
 /target/
-/log/
+/logs/
 /lib/
 
 # mpeltonen/sbt-idea plugin
@@ -47,3 +47,8 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+# Sensitive Resources
+src/main/resources/hibernate.cfg.xml
+src/test/resources/database.properties
+src/test/resources/hibernate.cfg.xml
