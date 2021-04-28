@@ -1,5 +1,6 @@
 delete from plant;
 delete from user;
+delete from user_plant;
 
 
 INSERT INTO user VALUES (1,'jcoyne','supersecret1','Joe','Coyne','1964-04-01', 750)
@@ -12,8 +13,13 @@ INSERT INTO user VALUES (1,'jcoyne','supersecret1','Joe','Coyne','1964-04-01', 7
 INSERT INTO plant VALUES (1,'Golden Pothos')
         ,(2,'Jade Plant')
         ,(3,'Monstera')
-        ,(4,'Monstera')
         ,(5,'Satin Pothos')
-        ,(6,'Golden Pothos')
-        ,(7,'Goldfish Plant');
+        ,(6,'Goldfish Plant');
 
+INSERT INTO user_plant VALUES (1, 1, 1, '2019-01-01')
+        ,(2, 1, 2, '2019-05-26')
+        ,(3, 2, 1, '2020-10-18')
+        ,(4, 2, 5, '2020-12-25')
+        ,(5, 3, 2, '2018-2-14')
+        ,(6, 4, 5, '2012-07-04')
+        ,(7, 5, 6, '2021-10-31');

@@ -43,8 +43,8 @@ public class User {
     @Column(name = "user_points")
     private int userPoints;
 
-    @OneToMany (mappedBy = "user")
-    private Set<UserPlant> userPlant;
+    @OneToMany (mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<UserPlant> plants = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -201,6 +201,14 @@ public class User {
         this.userPoints = userPoints;
     }
 
+    public Set<UserPlant> getPlants() {
+        return plants;
+    }
+
+    public void setPlants(Set<UserPlant> plants) {
+        this.plants = plants;
+    }
+
     /**
      * Gets user age.
      *
@@ -208,6 +216,24 @@ public class User {
      */
     public int getAge() {
         return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
+    }
+
+    public void addPlant(Plant plant, LocalDate dateAdopted) {
+        UserPlant userPlant = new UserPlant(this, plant, dateAdopted);
+        plants.add(userPlant);
+        plant.getUsers().add(userPlant);
+    }
+
+    public void removePlant(UserPlant plant) {
+        for (UserPlant userPlant : plants) {
+            if (userPlant.getId() == plant.getId()) {
+                plants.remove(userPlant);
+                userPlant.getPlant().getUsers().remove(userPlant);
+                userPlant.setUser(null);
+                userPlant.setPlant(null);
+
+            }
+        }
     }
 
 

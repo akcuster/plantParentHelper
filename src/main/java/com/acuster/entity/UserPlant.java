@@ -21,7 +21,8 @@ public class UserPlant {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "plant_id")
+    @JoinColumn(name = "plant_id",
+            foreignKey = @ForeignKey(name = "user_plant_plant_id_fk"))
     private Plant plant;
 
     @Column(name = "date_adopted")
@@ -30,10 +31,10 @@ public class UserPlant {
     public UserPlant() {
     }
 
-    public UserPlant(int id, User user, Plant plant) {
-        this.id = id;
+    public UserPlant(User user, Plant plant, LocalDate dateAdopted) {
         this.user = user;
         this.plant = plant;
+        this.dateAdopted = dateAdopted;
     }
 
     public int getId() {

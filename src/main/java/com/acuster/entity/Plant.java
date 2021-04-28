@@ -24,7 +24,7 @@ public class Plant {
     @Column(name = "plant_name")
     private String plantName;
 
-    @OneToMany(mappedBy = "plant")
+    @OneToMany(mappedBy = "plant", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<UserPlant> users = new HashSet<>();
 
     public Plant() {
@@ -48,6 +48,14 @@ public class Plant {
 
     public void setPlantName(String plantName) {
         this.plantName = plantName;
+    }
+
+    public Set<UserPlant> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<UserPlant> users) {
+        this.users = users;
     }
 
     @Override
