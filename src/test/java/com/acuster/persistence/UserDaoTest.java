@@ -2,12 +2,14 @@ package com.acuster.persistence;
 
 import com.acuster.entity.Plant;
 import com.acuster.entity.User;
+import com.acuster.entity.UserPlant;
 import com.acuster.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,7 +19,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class UserDaoTest {
 
-    GenericDao genericDao;
+    GenericDao<User> userDao;
+    GenericDao<Plant> plantDao;
+    GenericDao<UserPlant> userPlantDao;
 
     /**
      * Sets up by instantiating UserDao class.
@@ -27,7 +31,10 @@ class UserDaoTest {
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-        genericDao = new GenericDao(User.class);
+        userDao = new GenericDao<>(User.class);
+        plantDao = new GenericDao<>(Plant.class);
+        userPlantDao = new GenericDao<>(UserPlant.class);
+
     }
 
     /**
@@ -35,17 +42,8 @@ class UserDaoTest {
      */
     @Test
     void getAllUsersSuccess() {
-        List<User> users = (List<User>) genericDao.getAll();
+        List<User> users = userDao.getAll();
         assertEquals(6, users.size());
-    }
-
-    /**
-     * Verifies gets users by last name successfully.
-     */
-    @Test
-    void getByLastNameSuccess() {
-        List<User> users = (List<User>)genericDao.getByLastName("c");
-        assertEquals(3, users.size());
     }
 
     /**
@@ -53,7 +51,7 @@ class UserDaoTest {
      */
     @Test
     void getUsersByIdSuccess() {
-        User retrievedUser = (User)genericDao.getById(3);
+        User retrievedUser = userDao.getById(3);
         assertNotNull(retrievedUser);
         assertEquals("Barney", retrievedUser.getFirstName());
 
@@ -66,9 +64,9 @@ class UserDaoTest {
     void insertSuccess() {
 
         User newUser = new User( "fflintstone", "yabbadabbadoo", "Fred", "Flintstone", LocalDate.parse("1968-01-01"));
-        int id = genericDao.insert(newUser);
+        int id = userDao.insert(newUser);
         assertNotEquals(0,id);
-        User insertedUser = (User)genericDao.getById(id);
+        User insertedUser = userDao.getById(id);
         assertEquals(newUser, insertedUser);
     }
 
@@ -78,8 +76,8 @@ class UserDaoTest {
      */
     @Test
     void deleteSuccess() {
-        genericDao.delete(genericDao.getById(3));
-        assertNull(genericDao.getById(3));
+        userDao.delete(userDao.getById(3));
+        assertNull(userDao.getById(3));
     }
 
     /**
@@ -87,7 +85,7 @@ class UserDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<User> users = (List<User>)genericDao.getByPropertyEqual("lastName", "Curry");
+        List<User> users = userDao.getByPropertyEqual("lastName", "Curry");
         assertEquals(1, users.size());
         assertEquals(3, users.get(0).getId());
     }
@@ -97,7 +95,7 @@ class UserDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<User> users = (List<User>)genericDao.getByPropertyLike("lastName", "c");
+        List<User> users = userDao.getByPropertyLike("lastName", "c");
         assertEquals(3, users.size());
     }
 
@@ -107,10 +105,33 @@ class UserDaoTest {
     @Test
     void updateSuccess() {
         String newLastName = "Davis";
-        User userToUpdate = (User)genericDao.getById(3);
+        User userToUpdate = userDao.getById(3);
         userToUpdate.setLastName(newLastName);
-        genericDao.saveOrUpdate(userToUpdate);
-        User retrievedUser = (User)genericDao.getById(3);
+        userDao.saveOrUpdate(userToUpdate);
+        User retrievedUser = userDao.getById(3);
         assertEquals(userToUpdate, retrievedUser);
+    }
+
+    @Test
+    void getPlantsSuccess() {
+        User user = userDao.getById(1);
+        Set<UserPlant> plants = user.getPlants();
+
+        assertEquals(2, plants.size());
+
+    }
+
+    @Test
+    void addPlantSuccess() {
+        User user = userDao.getById(3);
+        List<Plant> plants = plantDao.getByPropertyEqual("plantName", "Monstera");
+        UserPlant newPlant = new UserPlant(user, plants.get(0), LocalDate.parse("2021-04-28"));
+        int id = userPlantDao.insert(newPlant);
+        user.addPlant(newPlant);
+        List<UserPlant> userPlants = userPlantDao.getAll();
+
+        assertTrue(userPlants.contains(newPlant));
+        assertTrue(user.getPlants().contains(newPlant));
+        assertTrue(plants.get(0).getUsers().contains(newPlant));
     }
 }

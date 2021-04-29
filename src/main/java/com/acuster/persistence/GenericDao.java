@@ -61,21 +61,6 @@ public class GenericDao<T> {
         return entity;
     }
 
-    public List<T> getByLastName(String lastName) {
-
-        logger.debug("Searching for: {}", lastName);
-
-        Session session = getSession();
-
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
-        Expression<String> propertyPath = root.get("lastName");
-        query.where(builder.like(propertyPath, "%" + lastName + "%"));
-        List<T> list = session.createQuery(query).getResultList();
-        session.close();
-        return list;
-    }
 
     /**
      * Get entity by property (like)

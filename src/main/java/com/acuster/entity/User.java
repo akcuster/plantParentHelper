@@ -218,10 +218,12 @@ public class User {
         return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
     }
 
-    public void addPlant(Plant plant, LocalDate dateAdopted) {
-        UserPlant userPlant = new UserPlant(this, plant, dateAdopted);
+    public UserPlant addPlant(UserPlant userPlant) {
+        //UserPlant userPlant = new UserPlant(this, plant, dateAdopted);
         plants.add(userPlant);
-        plant.getUsers().add(userPlant);
+        userPlant.getPlant().getUsers().add(userPlant);
+
+        return userPlant;
     }
 
     public void removePlant(UserPlant plant) {
