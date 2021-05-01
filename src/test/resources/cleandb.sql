@@ -13,6 +13,7 @@ INSERT INTO user VALUES (1,'jcoyne','supersecret1','Joe','Coyne','1964-04-01', 7
 INSERT INTO plant VALUES (1,'Golden Pothos')
         ,(2,'Jade Plant')
         ,(3,'Monstera')
+        ,(4,'Snake Plant')
         ,(5,'Satin Pothos')
         ,(6,'Goldfish Plant');
 

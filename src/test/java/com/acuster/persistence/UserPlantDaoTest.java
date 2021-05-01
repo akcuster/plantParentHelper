@@ -43,7 +43,7 @@ public class UserPlantDaoTest {
     @Test
     void getByIdSuccess() {
         UserPlant userPlant = (UserPlant) userPlantDao.getById(1);
-        assert(userPlant.getPlant().getId() == 0);
+        assert(userPlant.getPlant().getId() == 1);
         assert(userPlant.getUser().getId() == 1);
 
     }

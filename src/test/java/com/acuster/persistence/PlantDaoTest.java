@@ -1,11 +1,14 @@
 package com.acuster.persistence;
 
 import com.acuster.entity.Plant;
+import com.acuster.entity.User;
+import com.acuster.entity.UserPlant;
 import com.acuster.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +39,7 @@ class PlantDaoTest {
     @Test
     void getAllPlantsSuccess() {
         List<Plant> Plants = plantDao.getAll();
-        assertEquals(7, Plants.size());
+        assertEquals(6, Plants.size());
     }
 
     /**
@@ -55,7 +58,7 @@ class PlantDaoTest {
      */
     @Test
     void insertSuccess() {
-        Plant newPlant = new Plant("Jade Plant");
+        Plant newPlant = new Plant("Hoya");
         int id = plantDao.insert(newPlant);
         assertNotEquals(0, id);
         Plant insertedPlant = plantDao.getById(id);
@@ -77,7 +80,7 @@ class PlantDaoTest {
     @Test
     void getByPropertyEqualSuccess() {
         List<Plant> Plants = plantDao.getByPropertyEqual("plantName", "Golden Pothos");
-        assertEquals(2, Plants.size());
+        assertEquals(1, Plants.size());
         assertEquals(1, Plants.get(0).getId());
     }
 
@@ -101,6 +104,14 @@ class PlantDaoTest {
         plantDao.saveOrUpdate(PlantToUpdate);
         Plant retrievedPlant = plantDao.getById(3);
         assertEquals(PlantToUpdate, retrievedPlant);
+    }
+
+    @Test
+    void getPlantsSuccess() {
+        Plant plant = plantDao.getById(1);
+        Set<UserPlant> users = plant.getUsers();
+
+        assertEquals(2, users.size());
     }
 }
 

@@ -12,6 +12,7 @@
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Age</th>
+                <th scope="col">Plants</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,11 @@
                     <td>${user.firstName}</td>
                     <td>${user.lastName}</td>
                     <td>${user.age}</td>
+                    <td>
+                        <c:forEach var="userPlant" items="${user.plants}">
+                            ${userPlant.plant.plantName}<br>
+                        </c:forEach>
+                    </td>
                 </tr>
             </c:forEach>
         </tbody>
