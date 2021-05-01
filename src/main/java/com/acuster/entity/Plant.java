@@ -3,6 +3,7 @@ package com.acuster.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -14,12 +15,13 @@ import java.util.Set;
  */
 @Entity(name = "Plant")
 @Table(name = "plant")
-public class Plant {
+public class Plant implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native", strategy = "native")
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+//    @GenericGenerator(name = "native", strategy = "native")
+    private Integer id;
 
     @Column(name = "plant_name")
     private String plantName;

@@ -3,26 +3,26 @@ package com.acuster.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity(name = "UserPlant")
 @Table(name = "user_plant")
-public class UserPlant {
+public class UserPlant implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native", strategy = "native")
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    //@GenericGenerator(name = "native", strategy = "native")
+    private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id",
-            foreignKey = @ForeignKey(name = "user_plant_user_id_fk"))
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "plant_id",
-            foreignKey = @ForeignKey(name = "user_plant_plant_id_fk"))
+    @JoinColumn(name = "plant_id")
     private Plant plant;
 
     @Column(name = "date_adopted")

@@ -125,13 +125,27 @@ class UserDaoTest {
     void addPlantSuccess() {
         User user = userDao.getById(3);
         List<Plant> plants = plantDao.getByPropertyEqual("plantName", "Monstera");
-        UserPlant newPlant = new UserPlant(user, plants.get(0), LocalDate.parse("2021-04-28"));
-        int id = userPlantDao.insert(newPlant);
-        user.addPlant(newPlant);
+        Plant newPlant = plants.get(0);
+        UserPlant userPlant = user.addPlant(newPlant, LocalDate.parse("2021-04-28"));
+        userDao.saveOrUpdate(user);
         List<UserPlant> userPlants = userPlantDao.getAll();
 
-        assertTrue(userPlants.contains(newPlant));
-        assertTrue(user.getPlants().contains(newPlant));
-        assertTrue(plants.get(0).getUsers().contains(newPlant));
+        assertTrue(userPlants.contains(userPlant));
+        assertEquals(2, user.getPlants().size());
+        assertEquals(1, newPlant.getUsers().size());
+    }
+
+    @Test
+    void removePlantSuccess() {
+        User user = userDao.getById(1);
+        UserPlant userPlant = userPlantDao.getById(1);
+        Plant plant = userPlant.getPlant();
+        user.removePlant(userPlant);
+        userDao.saveOrUpdate(user);
+        List<UserPlant> userPlants = userPlantDao.getAll();
+
+        assertFalse(userPlants.contains(userPlant));
+        assertEquals(1, user.getPlants().size());
+        assertEquals(1, plant.getUsers().size());
     }
 }

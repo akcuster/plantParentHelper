@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.HashSet;
@@ -18,12 +19,12 @@ import java.util.Set;
  */
 @Entity(name = "User")
 @Table(name = "user")
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
-    private int id;
+    private Integer id;
 
     @Column(name = "user_name")
     private String userName;
@@ -218,8 +219,8 @@ public class User {
         return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
     }
 
-    public UserPlant addPlant(UserPlant userPlant) {
-        //UserPlant userPlant = new UserPlant(this, plant, dateAdopted);
+    public UserPlant addPlant(Plant plant, LocalDate dateAdopted) {
+        UserPlant userPlant = new UserPlant(this, plant, dateAdopted);
         plants.add(userPlant);
         userPlant.getPlant().getUsers().add(userPlant);
 
@@ -227,15 +228,20 @@ public class User {
     }
 
     public void removePlant(UserPlant plant) {
-        for (UserPlant userPlant : plants) {
-            if (userPlant.getId() == plant.getId()) {
-                plants.remove(userPlant);
-                userPlant.getPlant().getUsers().remove(userPlant);
-                userPlant.setUser(null);
-                userPlant.setPlant(null);
+//        for (UserPlant userPlant : plants) {
+//            if (userPlant.getId() == plant.getId()) {
+//                userPlant.getPlant().getUsers().remove(plant);
+//                plants.remove(userPlant);
+//                userPlant.setUser(null);
+//                userPlant.setPlant(null);
+//
+//            }
+//        }
 
-            }
-        }
+        plant.getPlant().getUsers().remove(plant);
+        plants.remove(plant);
+        plant.setUser(null);
+        plant.setPlant(null);
     }
 
 
