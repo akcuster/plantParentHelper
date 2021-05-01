@@ -42,24 +42,10 @@ public class SearchUser extends HttpServlet {
         }
 
         request.setAttribute("users", users);
-//        request.setAttribute("plants", getThePlants(users));
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/results.jsp");
         dispatcher.forward(request, response);
     }
-
-//    public List<Plant> getThePlants(List<User> users) {
-////        List<Plant> plants = new ArrayList<Plant>();
-//        for (User user : users) {
-//            Set<UserPlant> userPlants = user.getPlants();
-////            for (UserPlant userPlant : userPlants) {
-////                plants.add(userPlant.getPlant());
-////            }
-//        }
-//
-////        return plants;
-//
-//    }
 
 
 }
