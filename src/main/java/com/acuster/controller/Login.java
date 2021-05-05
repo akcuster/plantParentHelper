@@ -18,15 +18,19 @@ import java.io.IOException;
         urlPatterns = {"/log-in"}
 )
 
-public class SearchUser extends HttpServlet {
+public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String logInURL = "https://plant-collector.auth.us-east-2.amazoncognito.com/login?client_id=29fon9l71edrci2b398ohtm3tf&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:8080/PlantCollector_war/logged-in";
+        String redirect = "http://localhost:8080/PlantCollector_war/logged-in";
+        String responseType = "code";
+        String clientID = "29fon9l71edrci2b398ohtm3tf";
+        String logInURL = "https://plant-collector.auth.us-east-2.amazoncognito.com/login?client_id=" + clientID +
+                "&response_type=" + responseType + "&redirect_uri=" + redirect + "";
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher(logInURL);
-        dispatcher.forward(request, response);
+        response.sendRedirect(logInURL);
+
     }
 
 
