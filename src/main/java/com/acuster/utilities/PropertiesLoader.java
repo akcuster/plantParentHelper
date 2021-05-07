@@ -1,4 +1,4 @@
-package com.acuster.test.util;
+package com.acuster.utilities;
 
 import java.io.IOException;
 import java.util.Properties;
