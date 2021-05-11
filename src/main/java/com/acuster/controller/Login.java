@@ -48,16 +48,6 @@ public class Login extends HttpServlet implements PropertiesLoader {
 
         final Logger logger = LogManager.getLogger(this.getClass());
 
-//        Properties awsCognito = new Properties();
-//
-//        try {
-//            awsCognito = loadProperties("/awsCognito.properties");
-//        } catch (Exception e) {
-//            logger.error("failed to load properties" + e);
-//        }
-
-
-
         String redirect = awsCognito.getProperty("localRedirectUri");
         String responseType = "code";
         String clientID = awsCognito.getProperty("clientID");
