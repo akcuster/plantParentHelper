@@ -93,8 +93,9 @@ public class LoggedIn extends HttpServlet implements PropertiesLoader {
 
             List<User> users = userDao.getByPropertyEqual("userName", userName);
             int id = 0;
+            User user = null;
             if (users == null || users.isEmpty()) {
-                User user = new User(userName, firstName, lastName, LocalDate.parse(birthdate));
+                user = new User(userName, firstName, lastName, LocalDate.parse(birthdate));
                 id = userDao.insert(user);
 
                 if (id != 0) {
@@ -106,13 +107,14 @@ public class LoggedIn extends HttpServlet implements PropertiesLoader {
                 }
             } else {
                 id = users.get(0).getId();
+                user = users.get(0);
             }
             //TODO add user to session
             HttpSession session = request.getSession();
             session.setAttribute("userId", id);
-            session.setAttribute("userName", userName);
+            session.setAttribute("user", user);
 
-           logger.info("User set into session: " + session.getAttribute("userName"));
+           logger.info("User set into session: " + session.getAttribute("user"));
 
         } else {
             //TODO redirect to error page
@@ -120,7 +122,7 @@ public class LoggedIn extends HttpServlet implements PropertiesLoader {
         }
 
         //TODO redirect to profile page if user logged in successfully
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/user-profile");
         dispatcher.forward(request, response);
     }
 

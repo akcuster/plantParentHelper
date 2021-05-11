@@ -1,16 +1,23 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: amber
-  Date: 5/4/21
-  Time: 3:43 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@include file="taglib.jsp"%>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
+<c:import url="head.jsp"/>
+
   <body>
-  $END$
+  <h3>${user.userName}</h3>
+  <h3>${user.firstName}</h3>
+  <h3>${user.lastName}</h3>
+  <h3>${user.age}</h3>
+  <c:choose>
+    <c:when test="user.plants != null">
+      <c:forEach var="plant" items="${user.plants}">
+        ${userPlant.plant.plantName}<br>
+      </c:forEach>
+    </c:when>
+
+    <c:otherwise>
+      <h4>You Don't Have Any Plants.</h4>
+    </c:otherwise>
+  </c:choose>
   </body>
 </html>

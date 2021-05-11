@@ -46,8 +46,6 @@ public class Login extends HttpServlet implements PropertiesLoader {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
 
-        final Logger logger = LogManager.getLogger(this.getClass());
-
         String redirect = awsCognito.getProperty("localRedirectUri");
         String responseType = "code";
         String clientID = awsCognito.getProperty("clientID");
