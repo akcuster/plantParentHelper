@@ -57,14 +57,12 @@ public class User implements Serializable {
      * Instantiates a new User.
      *
      * @param userName     the user name
-     * @param userPassword the user password
      * @param firstName    the first name
      * @param lastName     the last name
      * @param dateOfBirth  the date of birth
      */
-    public User(String userName, String userPassword, String firstName, String lastName, LocalDate dateOfBirth) {
+    public User(String userName, String firstName, String lastName, LocalDate dateOfBirth) {
         this.userName = userName;
-        this.userPassword = userPassword;
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;

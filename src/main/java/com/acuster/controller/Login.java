@@ -5,11 +5,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -24,21 +26,39 @@ import java.util.Properties;
 )
 
 public class Login extends HttpServlet implements PropertiesLoader {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
 
-        final Logger logger = LogManager.getLogger(this.getClass());
+    private Properties awsCognito;
+    final Logger logger = LogManager.getLogger(this.getClass());
 
-        Properties awsCognito = new Properties();
-
+    public void init() throws ServletException {
         try {
             awsCognito = loadProperties("/awsCognito.properties");
         } catch (Exception e) {
             logger.error("failed to load properties" + e);
         }
 
-        String redirect = awsCognito.getProperty("redirect");
+        ServletContext context = getServletContext();
+
+        context.setAttribute("awsCognitoProperties", awsCognito);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+
+        final Logger logger = LogManager.getLogger(this.getClass());
+
+//        Properties awsCognito = new Properties();
+//
+//        try {
+//            awsCognito = loadProperties("/awsCognito.properties");
+//        } catch (Exception e) {
+//            logger.error("failed to load properties" + e);
+//        }
+
+
+
+        String redirect = awsCognito.getProperty("localRedirectUri");
         String responseType = "code";
         String clientID = awsCognito.getProperty("clientID");
         String logInURL = "https://plant-collector.auth.us-east-2.amazoncognito.com/login?client_id=" + clientID +

@@ -17,18 +17,23 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.security.Key;
 import java.security.KeyFactory;
 import java.security.PublicKey;
 import java.security.spec.RSAPublicKeySpec;
-
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Properties;
+import com.acuster.utilities.PropertiesLoader;
 
 
 /**
@@ -40,25 +45,25 @@ import java.security.spec.RSAPublicKeySpec;
         urlPatterns = {"/logged-in"}
 )
 
-public class LoggedIn extends HttpServlet {
+public class LoggedIn extends HttpServlet implements PropertiesLoader {
+
+    final Logger logger = LogManager.getLogger(this.getClass());
+    private GenericDao<User> userDao = new GenericDao<>(User.class);
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        final Logger logger = LogManager.getLogger(this.getClass());
+        ServletContext context = getServletContext();
+        Properties awsCognito = (Properties) context.getAttribute("awsCognitoProperties");
 
-        String awsCognitoRegion = "us-east-2";
-        String awsUserPoolsId = "us-east-2_RhJRzXj6o";
+        String awsCognitoRegion = awsCognito.getProperty("region");
+        String awsUserPoolsId = awsCognito.getProperty("userPoolID");
         String authCode = request.getParameter("code");
 
-
         AwsAuthorizationEndpoint authEndpoint = new AwsAuthorizationEndpoint();
-        String idToken = authEndpoint.postToken(authCode);
-        //AwsTokenResponse tokenResponse = new AwsTokenResponse();
+        String idToken = authEndpoint.postToken(authCode, awsCognito);
 
-        //String idToken = tokenResponse.getIdToken();
-        logger.error("id token: " + idToken);
-        //String idToken = request.getParameter("id_token");
+        logger.info("id token: " + idToken);
         DecodedJWT jwt = null;
 
         RSAKeyProvider keyProvider = new AwsCognitoRSAKeyProvider(awsCognitoRegion, awsUserPoolsId);
@@ -70,27 +75,51 @@ public class LoggedIn extends HttpServlet {
             jwt = jwtVerifier.verify(idToken);
         } catch (JWTVerificationException e) {
            logger.error("Issue with verifying token " + e);
+           //TODO redirect to error page if login fails
         } catch (Exception e) {
             logger.error("There was an error..." + e);
         }
 
-//       try {
-//           jwt = JWT.decode(idToken);
-//       } catch (JWTDecodeException e) {
-//          logger.error("Invalid token: " + e);
-//       }
+        if (jwt != null) {
+            String userName = jwt.getClaim("cognito:username").asString();
+            String firstName = jwt.getClaim("given_name").asString();
+            String lastName = jwt.getClaim("family_name").asString();
+            String email = jwt.getClaim("email").asString();
+            String birthdate = jwt.getClaim("birthdate").asString();
 
-       if (jwt != null) {
-           String userName = jwt.getClaim("cognito:username").asString();
-           String firstName = jwt.getClaim("given_name").asString();
-           String lastName = jwt.getClaim("family_name").asString();
-           String email = jwt.getClaim("email").asString();
+            logger.info(userName + firstName + lastName + email + birthdate);
 
-           logger.info(userName + firstName + lastName + email);
-       } else {
-           logger.error("JWT is null" + jwt);
-       }
+            //TODO check if user exists, if not, create new user
 
+            List<User> users = userDao.getByPropertyEqual("userName", userName);
+            int id = 0;
+            if (users == null || users.isEmpty()) {
+                User user = new User(userName, firstName, lastName, LocalDate.parse(birthdate));
+                id = userDao.insert(user);
+
+                if (id != 0) {
+                   logger.info("Successfully created new user");
+
+                } else {
+                   logger.error("Failed to insert user");
+                   //TODO redirect to error page
+                }
+            } else {
+                id = users.get(0).getId();
+            }
+            //TODO add user to session
+            HttpSession session = request.getSession();
+            session.setAttribute("userId", id);
+            session.setAttribute("userName", userName);
+
+           logger.info("User set into session: " + session.getAttribute("userName"));
+
+        } else {
+            //TODO redirect to error page
+            logger.error("JWT is null" + jwt);
+        }
+
+        //TODO redirect to profile page if user logged in successfully
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }

@@ -63,7 +63,7 @@ class UserDaoTest {
     @Test
     void insertSuccess() {
 
-        User newUser = new User( "fflintstone", "yabbadabbadoo", "Fred", "Flintstone", LocalDate.parse("1968-01-01"));
+        User newUser = new User( "fflintstone", "Fred", "Flintstone", LocalDate.parse("1968-01-01"));
         int id = userDao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = userDao.getById(id);
