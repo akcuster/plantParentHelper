@@ -31,7 +31,7 @@ public class AwsAuthorizationEndpoint implements PropertiesLoader {
         Client client = ClientBuilder.newClient();
         String responseType = "token";
         String clientID = awsCognito.getProperty("clientID");
-        String redirect = awsCognito.getProperty("localRedirectUri");
+        String redirect = awsCognito.getProperty("localLoginRedirect");
         String scope = "aws.cognito.signin.user.admin+openid+profile";
 
         WebTarget target =

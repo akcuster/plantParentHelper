@@ -19,5 +19,6 @@
       <h4>You Don't Have Any Plants.</h4>
     </c:otherwise>
   </c:choose>
+  <a href="${pageContext.request.contextPath}/log-out">Log Out</a>
   </body>
 </html>
