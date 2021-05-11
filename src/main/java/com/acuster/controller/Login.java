@@ -46,7 +46,7 @@ public class Login extends HttpServlet implements PropertiesLoader {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
 
-        String redirect = awsCognito.getProperty("localRedirectUri");
+        String redirect = awsCognito.getProperty("localLoginRedirect");
         String responseType = "code";
         String clientID = awsCognito.getProperty("clientID");
         String logInURL = "https://plant-collector.auth.us-east-2.amazoncognito.com/login?client_id=" + clientID +
