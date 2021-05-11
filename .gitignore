@@ -7,6 +7,8 @@
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+.idea/qaplug_profiles.xml
+.idea/misc.xml
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
@@ -53,3 +55,4 @@ src/main/resources/hibernate.cfg.xml
 src/test/resources/database.properties
 src/test/resources/hibernate.cfg.xml
 src/main/resources/log4j2.properties
+src/main/resources/awsCognito.properties
