@@ -61,13 +61,14 @@ public class AddUserPlant extends HttpServlet {
         }
         session.setAttribute("plantId", plantId);
         logger.info("Plant ID: " + plantId);
+        String url = "/add-plant.jsp";
+        String errorMessage = "";
 
         // Check if user is logged in
         if (!checkIfUserLoggedIn(user, id)) {
-            logger.error("User not logged in");
-            //TODO change to login error page
-            response.sendRedirect("index.jsp");
-            return;
+            url = "/error.jsp";
+            errorMessage = "You just be logged in to view this page";
+            request.setAttribute("errorMessage", errorMessage);
         }
 
         // Make sure a plant was confirmed to add
@@ -78,9 +79,7 @@ public class AddUserPlant extends HttpServlet {
         // Redirect to add plant (or error) page searching for or confirming a plant to add fails
         if (request.getParameter("submit") == null && plantId == null) {
             logger.error("Search failed");
-            //TODO redirect to error page
-            response.sendRedirect("add-plant.jsp");
-            return;
+            outputMessage = "Search failed";
         }
 
         List<Plant> plants = searchPlants(plantName);
@@ -95,7 +94,7 @@ public class AddUserPlant extends HttpServlet {
         request.setAttribute("outputMessage", outputMessage);
         session.setAttribute("plants", plants);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/add-plant.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }
 

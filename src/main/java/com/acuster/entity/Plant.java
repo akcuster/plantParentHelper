@@ -1,7 +1,5 @@
 package com.acuster.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -60,13 +58,13 @@ public class Plant implements Serializable {
         this.users = users;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Plant plant = (Plant) o;
-        return id == plant.id &&
-                Objects.equals(plantName, plant.plantName);
+        return Objects.equals(id, plant.id) && Objects.equals(plantName, plant.plantName);
     }
 
     @Override
