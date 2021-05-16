@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * a servlet to search for a user
+ * a servlet to log a user out of aws cognito
  * @author acuster
  */
 

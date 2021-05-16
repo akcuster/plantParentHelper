@@ -16,14 +16,22 @@ import java.security.interfaces.RSAPublicKey;
  * A class that implements RSAKeyProvider
  * Modified from a class created by AndiDev in this stackoverflow post https://stackoverflow.com/questions/48356287/is-there-any-java-example-of-verification-of-jwt-for-aws-cognito-api
  */
-
 public class AwsCognitoRSAKeyProvider implements RSAKeyProvider {
 
+    /**
+     * The Logger.
+     */
     final Logger logger = LogManager.getLogger(this.getClass());
 
     private URL awsKidUrl = null;
     private final JwkProvider provider;
 
+    /**
+     * Instantiates a new Aws cognito rsa key provider.
+     *
+     * @param awsCognitoRegion the aws cognito region
+     * @param awsUserPoolsId   the aws user pools id
+     */
     public AwsCognitoRSAKeyProvider(String awsCognitoRegion, String awsUserPoolsId) {
         String url = String.format("https://cognito-idp.%s.amazonaws.com/%s/.well-known/jwks.json", awsCognitoRegion, awsUserPoolsId);
         try {
@@ -34,6 +42,11 @@ public class AwsCognitoRSAKeyProvider implements RSAKeyProvider {
         provider = new JwkProviderBuilder(awsKidUrl).build();
     }
 
+    /**
+     * Gets the public key to compare the json web token against
+     * @param kid
+     * @return
+     */
     public RSAPublicKey getPublicKeyById(String kid) {
         RSAPublicKey rsaPublicKey = null;
 
@@ -46,6 +59,7 @@ public class AwsCognitoRSAKeyProvider implements RSAKeyProvider {
         return rsaPublicKey;
     }
 
+    // There is no private key needed, so that needs to return null
     @Override
     public RSAPrivateKey getPrivateKey() {
         return null;

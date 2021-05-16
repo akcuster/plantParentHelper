@@ -16,10 +16,23 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Properties;
 
+/**
+ * A class to handle the AWS cognito authorization endpoint for authorizing a user.
+ */
 public class AwsAuthorizationEndpoint implements PropertiesLoader {
 
+    /**
+     * The Logger.
+     */
     final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * Forms a post request to send to the authentication endpoint.
+     *
+     * @param code       the code
+     * @param awsCognito the aws cognito
+     * @return the string
+     */
     public String postToken(String code, Properties awsCognito) {
 
         try {

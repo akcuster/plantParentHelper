@@ -1,8 +1,5 @@
 package com.acuster.controller;
 
-import com.acuster.entity.User;
-import com.acuster.persistence.GenericDao;
-import com.acuster.utilities.PropertiesLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * a servlet to search for a user
+ * a servlet to log the user out of the session and forward to the homepage
  * @author acuster
  */
 

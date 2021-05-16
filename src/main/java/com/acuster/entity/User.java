@@ -1,7 +1,5 @@
 package com.acuster.entity;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -56,10 +54,10 @@ public class User implements Serializable {
     /**
      * Instantiates a new User.
      *
-     * @param userName     the user name
-     * @param firstName    the first name
-     * @param lastName     the last name
-     * @param dateOfBirth  the date of birth
+     * @param userName    the user name
+     * @param firstName   the first name
+     * @param lastName    the last name
+     * @param dateOfBirth the date of birth
      */
     public User(String userName, String firstName, String lastName, LocalDate dateOfBirth) {
         this.userName = userName;
@@ -176,12 +174,8 @@ public class User implements Serializable {
         this.dateOfBirth = dateOfBirth;
     }
 
-    /**
-     * Gets user level.
-     *
-     * @return the user level
-     */
-
+    //TODO add points when a plant is added to a user's collection. Eventually also add points when a plant care task is completed
+    //TODO add a field for a user's level. Determine level based on points
     /**
      * Gets user points.
      *
@@ -200,10 +194,20 @@ public class User implements Serializable {
         this.userPoints = userPoints;
     }
 
+    /**
+     * Gets plants in a user's collection.
+     *
+     * @return the plants
+     */
     public Set<UserPlant> getPlants() {
         return plants;
     }
 
+    /**
+     * Sets plants.
+     *
+     * @param plants the plants
+     */
     public void setPlants(Set<UserPlant> plants) {
         this.plants = plants;
     }
@@ -217,6 +221,13 @@ public class User implements Serializable {
         return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
     }
 
+    /**
+     * Add plant to user's collection.
+     *
+     * @param plant       the plant
+     * @param dateAdopted the date adopted
+     * @return the user plant
+     */
     public UserPlant addPlant(Plant plant, LocalDate dateAdopted) {
         UserPlant userPlant = new UserPlant(this, plant, dateAdopted);
         plants.add(userPlant);
@@ -225,16 +236,12 @@ public class User implements Serializable {
         return userPlant;
     }
 
+    /**
+     * Remove plant from user's collection.
+     *
+     * @param plant the plant
+     */
     public void removePlant(UserPlant plant) {
-//        for (UserPlant userPlant : plants) {
-//            if (userPlant.getId() == plant.getId()) {
-//                userPlant.getPlant().getUsers().remove(plant);
-//                plants.remove(userPlant);
-//                userPlant.setUser(null);
-//                userPlant.setPlant(null);
-//
-//            }
-//        }
 
         plant.getPlant().getUsers().remove(plant);
         plants.remove(plant);
@@ -248,12 +255,7 @@ public class User implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && userPoints == user.userPoints &&
-                Objects.equals(userName, user.userName) &&
-                Objects.equals(userPassword, user.userPassword) &&
-                Objects.equals(firstName, user.firstName) &&
-                Objects.equals(lastName, user.lastName) &&
-                Objects.equals(dateOfBirth, user.dateOfBirth);
+        return userPoints == user.userPoints && Objects.equals(id, user.id) && Objects.equals(userName, user.userName) && Objects.equals(userPassword, user.userPassword) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(dateOfBirth, user.dateOfBirth);
     }
 
     @Override

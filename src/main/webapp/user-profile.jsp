@@ -8,17 +8,17 @@
   <h3>${user.firstName}</h3>
   <h3>${user.lastName}</h3>
   <h3>${user.age}</h3>
-  <c:choose>
-    <c:when test="user.plants != null">
-      <c:forEach var="plant" items="${user.plants}">
-        ${userPlant.plant.plantName}<br>
-      </c:forEach>
-    </c:when>
 
-    <c:otherwise>
-      <h4>You Don't Have Any Plants.</h4>
-    </c:otherwise>
-  </c:choose>
+  <c:forEach var="plant" items="${usersPlants}">
+    ${plant.plantName}<br>
+  </c:forEach>
+
+
+
+
+
+
+  <a href="${pageContext.request.contextPath}/add-plant.jsp">Add Plants</a>
   <a href="${pageContext.request.contextPath}/log-out">Log Out</a>
   </body>
 </html>

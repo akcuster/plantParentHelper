@@ -1,20 +1,21 @@
 package com.acuster.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
+//TODO create a plant profile page linked to from the list of plants on the user's profile
+//TODO connect to the task table to keep track of all plant care tasks
+/**
+ * A class to represent a specific plant in a user's collection.
+ */
 @Entity(name = "UserPlant")
 @Table(name = "user_plant")
 public class UserPlant implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    //@GenericGenerator(name = "native", strategy = "native")
     private Integer id;
 
     @ManyToOne(cascade = CascadeType.ALL)
@@ -28,43 +29,93 @@ public class UserPlant implements Serializable {
     @Column(name = "date_adopted")
     private LocalDate dateAdopted;
 
+    /**
+     * Instantiates a new User plant.
+     */
     public UserPlant() {
     }
 
+    /**
+     * Instantiates a new User plant.
+     *
+     * @param user        the user
+     * @param plant       the plant
+     * @param dateAdopted the date adopted
+     */
     public UserPlant(User user, Plant plant, LocalDate dateAdopted) {
         this.user = user;
         this.plant = plant;
         this.dateAdopted = dateAdopted;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
     public User getUser() {
         return user;
     }
 
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     */
     public void setUser(User user) {
         this.user = user;
     }
 
+    /**
+     * Gets plant.
+     *
+     * @return the plant
+     */
     public Plant getPlant() {
         return plant;
     }
 
+    /**
+     * Sets plant.
+     *
+     * @param plant the plant
+     */
     public void setPlant(Plant plant) {
         this.plant = plant;
     }
 
+    /**
+     * Gets date adopted.
+     *
+     * @return the date adopted
+     */
     public LocalDate getDateAdopted() {
         return dateAdopted;
     }
 
+    /**
+     * Sets date adopted.
+     *
+     * @param dateAdopted the date adopted
+     */
     public void setDateAdopted(LocalDate dateAdopted) {
         this.dateAdopted = dateAdopted;
     }
