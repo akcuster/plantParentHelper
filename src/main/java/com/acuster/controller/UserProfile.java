@@ -18,12 +18,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+
+/**
+ * A servlet to handle the output for a user profile.
+ */
 @WebServlet(
         urlPatterns = {"/user-profile"}
 )
 
 public class UserProfile extends HttpServlet {
 
+    /**
+     * The Logger.
+     */
     final Logger logger = LogManager.getLogger(this.getClass());
 
     @Override
@@ -38,6 +45,7 @@ public class UserProfile extends HttpServlet {
         logger.info("User: " + user);
         logger.info("User's Plants: " + user.getPlants());
 
+        // Check if the user is logged in, send them to an error page if not
         if (id != 0) {
             request.setAttribute("user", user);
             plants = getPlants(user);
@@ -48,6 +56,7 @@ public class UserProfile extends HttpServlet {
             logger.error("There was a problem logging in...");
         }
 
+        // Check if the user has any plants and output a message based on the check
         if (!plants.isEmpty()) {
             session.setAttribute("usersPlants", plants);
             outputMessage = "Your Plants";
@@ -60,6 +69,12 @@ public class UserProfile extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
+    /**
+     * Gets user's plants.
+     *
+     * @param user the user
+     * @return the plants
+     */
     public List<Plant> getPlants(User user) {
         Set<UserPlant> userPlants = user.getPlants();
         List<Plant> plants = new ArrayList<>();

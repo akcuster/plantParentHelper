@@ -18,7 +18,7 @@
         <h3>${outputMessage}</h3>
     </c:if>
 
-    <c:if test="${!plants.isEmpty()}" >
+    <c:if test="${plants != null}" >
         <thead>Confirm Plant</thead>
         <tbody>
         <tr><th>Plant Name</th><th></th></tr>

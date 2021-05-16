@@ -20,14 +20,17 @@ import java.util.List;
 
 /**
  * a servlet to add a plant to a user's collection
+ *
  * @author acuster
  */
-
 @WebServlet(
         urlPatterns = {"/add-plant"}
 )
 
 public class AddUserPlant extends HttpServlet {
+    /**
+     * The Logger.
+     */
     final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao<Plant> plantDao = new GenericDao<>(Plant.class);
     private GenericDao<User> userDao = new GenericDao<>(User.class);
@@ -98,6 +101,13 @@ public class AddUserPlant extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
+    /**
+     * Check if user is logged in and return a boolean of true if the user is logged in.
+     *
+     * @param user the user
+     * @param id   the id
+     * @return the boolean
+     */
     public boolean checkIfUserLoggedIn(User user, int id) {
         boolean loggedIn;
         loggedIn = (user != null && id != 0);
@@ -105,6 +115,12 @@ public class AddUserPlant extends HttpServlet {
         return loggedIn;
     }
 
+    /**
+     * Search the database for the plants similar to the plant the user wants to add to their collection.
+     *
+     * @param plantName the plant name
+     * @return the list of plants found
+     */
     public List<Plant> searchPlants(String plantName) {
         List<Plant> plants;
         plants = plantDao.getByPropertyLike("plantName", plantName);
@@ -114,6 +130,14 @@ public class AddUserPlant extends HttpServlet {
         return plants;
     }
 
+    /**
+     * Add plant to collection. Return output message based on whether or not the plant was found
+     *
+     * @param plantId     the plant id
+     * @param user        the user
+     * @param dateAdopted the date adopted
+     * @return the output message
+     */
     public String addPlantToCollection(String plantId, User user, String dateAdopted) {
         Plant plant = plantDao.getById(Integer.parseInt(plantId));
         UserPlant newPlant = user.addPlant(plant, LocalDate.parse(dateAdopted));

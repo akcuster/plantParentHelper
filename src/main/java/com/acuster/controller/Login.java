@@ -4,23 +4,21 @@ import com.acuster.utilities.PropertiesLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Properties;
 
 
 /**
  * a servlet that redirects to amazon cognito hosted UI for login
+ *
  * @author acuster
  */
-
 @WebServlet(
         urlPatterns = {"/log-in"}
 )
@@ -28,6 +26,9 @@ import java.util.Properties;
 public class Login extends HttpServlet implements PropertiesLoader {
 
     private Properties awsCognito;
+    /**
+     * The Logger.
+     */
     final Logger logger = LogManager.getLogger(this.getClass());
 
     public void init() throws ServletException {

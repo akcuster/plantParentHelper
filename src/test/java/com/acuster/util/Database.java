@@ -1,4 +1,4 @@
-package com.acuster.utilities;
+package com.acuster.util;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,8 +1,6 @@
 package com.acuster.controller;
 
-import com.acuster.entity.Plant;
 import com.acuster.entity.User;
-import com.acuster.entity.UserPlant;
 import com.acuster.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -14,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
+//TODO add functionality to add friends, which will use this user search
 /**
  * a servlet to search for a user
  * @author acuster
@@ -31,13 +29,14 @@ public class SearchUser extends HttpServlet {
             throws ServletException, IOException {
 
         GenericDao<User> userDao = new GenericDao<>(User.class);
-        List<User> users;
+        List<User> users = new ArrayList<>();
 
         if (request.getParameter("submit").equals("search")) {
              users = userDao.getByPropertyEqual("userName", request.getParameter("userName"));
-
+            //TODO add the ability to search by name as well
+            //TODO add the ability to search for all users that have a specific plant
         } else {
-            users = userDao.getAll();
+            //TODO output a message that no users were found
 
         }
 
