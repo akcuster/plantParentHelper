@@ -9,8 +9,10 @@
   <h3>${user.lastName}</h3>
   <h3>${user.age}</h3>
 
-  <c:forEach var="plant" items="${usersPlants}">
-    ${plant.plantName}<br>
+  <h3>${outputMessage}</h3>
+
+  <c:forEach var="plants" items="${usersPlants}">
+    <a href="${pageContext.request.contextPath}/plant-profile?userPlantId=${plants.key}">${plants.value}</a><a href="${pageContext.request.contextPath}/remove-plant?userPlantId=${plants.key}">Remove</a>
   </c:forEach>
 
 

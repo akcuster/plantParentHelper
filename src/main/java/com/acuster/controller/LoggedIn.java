@@ -83,7 +83,7 @@ public class LoggedIn extends HttpServlet implements PropertiesLoader {
             setUserIntoSession(session, userName, firstName, lastName, birthdate);
             logger.info("User set into session: " + session.getAttribute("user"));
 
-            url = "user-profile.jsp";
+            url = "user-profile";
 
         } else {
             //TODO redirect to error page

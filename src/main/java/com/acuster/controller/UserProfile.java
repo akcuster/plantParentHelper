@@ -1,6 +1,5 @@
 package com.acuster.controller;
 
-import com.acuster.entity.Plant;
 import com.acuster.entity.User;
 import com.acuster.entity.UserPlant;
 import org.apache.logging.log4j.LogManager;
@@ -14,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -32,41 +31,70 @@ public class UserProfile extends HttpServlet {
      * The Logger.
      */
     final Logger logger = LogManager.getLogger(this.getClass());
+    private String url;
+    private String outputMessage;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
+
         HttpSession session = request.getSession();
         int id = (int) session.getAttribute("userId");
         User user = (User) session.getAttribute("user");
-        List<Plant> plants = new ArrayList<>();
-        String url = "/error.jsp";
-        String outputMessage = "";
+
+        Map<Integer, String> plants;
+
         logger.info("User: " + user);
         logger.info("User's Plants: " + user.getPlants());
 
-        // Check if the user is logged in, send them to an error page if not
-        if (id != 0) {
-            request.setAttribute("user", user);
-            plants = getPlants(user);
-            url = "/user-profile.jsp";
-        } else {
-            String errorMessage = "Sorry, you're not logged in";
-            request.setAttribute("errorMessage", errorMessage);
-            logger.error("There was a problem logging in...");
-        }
+        // Check that a user is logged in and retrieve their plants
+        plants = checkIfUserIsLoggedIn(session, id, user);
 
-        // Check if the user has any plants and output a message based on the check
+        // Check that the user's list of plants isn't empty and set the output message accordingly
+        checkForPlants(session, plants);
+
+        session.setAttribute("outputMessage", outputMessage);
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+    }
+
+    /**
+     * Check if a user's list of plants is empty and output a message based on whether or not plants are found
+     * @param session the session
+     * @param plants the user's plants
+     */
+    private void checkForPlants(HttpSession session, Map<Integer, String> plants) {
         if (!plants.isEmpty()) {
             session.setAttribute("usersPlants", plants);
             outputMessage = "Your Plants";
         } else {
             outputMessage = "Your Plant Collection is Empty";
         }
-        session.setAttribute("outputMessage", outputMessage);
+    }
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+    /**
+     * Check the session to see if a user is logged in. If so, call the getPlants method, passing in the user. If not,
+     * set the output message telling the user they're not logged in and set the url for the error page.
+     * @param session the session
+     * @param id the user's id
+     * @param user the user object
+     * @return a list of the user's plants
+     */
+    private Map<Integer, String> checkIfUserIsLoggedIn(HttpSession session, int id, User user) {
+        Map<Integer, String> plants = new HashMap<>();
+        // Check if the user is logged in, send them to an error page if not
+        if (id != 0) {
+            session.setAttribute("user", user);
+            session.setAttribute("userId", id);
+            plants = getPlants(user);
+            url = "/user-profile.jsp";
+        } else {
+            logger.error("There was a problem logging in...");
+            outputMessage = "Sorry, you're not logged in";
+            url = "error.jsp";
+        }
+        return plants;
     }
 
     /**
@@ -75,14 +103,14 @@ public class UserProfile extends HttpServlet {
      * @param user the user
      * @return the plants
      */
-    public List<Plant> getPlants(User user) {
+    public Map<Integer, String> getPlants(User user) {
         Set<UserPlant> userPlants = user.getPlants();
-        List<Plant> plants = new ArrayList<>();
+        Map<Integer, String> plants = new HashMap<>();
         for (UserPlant userPlant : userPlants) {
             logger.info("user Plant in getPlants forEach: " + userPlant);
 
 
-            plants.add(userPlant.getPlant());
+            plants.put(userPlant.getId(), userPlant.getPlant().getPlantName());
             logger.info("plants in getPlants forEach: " + plants);
         }
 
