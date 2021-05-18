@@ -121,6 +121,8 @@ public class GenericDao<T> {
         session.saveOrUpdate(entity);
         transaction.commit();
         session.close();
+
+
     }
 
     /**
