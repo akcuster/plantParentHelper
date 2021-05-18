@@ -88,7 +88,7 @@ public class LoggedIn extends HttpServlet implements PropertiesLoader {
         } else {
             //TODO redirect to error page
             logger.error("JWT is null" + decodedJwt);
-            url = "error.jsp";
+            url = "error-success.jsp";
             outputMessage = "There was an error, please try again";
         }
 
@@ -145,7 +145,7 @@ public class LoggedIn extends HttpServlet implements PropertiesLoader {
            logger.info("Successfully created new user");
         } else {
            logger.error("Failed to insert user");
-           url = "error.jsp";
+           url = "error-success.jsp";
            outputMessage = "Failed to create new user, please try again";
         }
         return user;
@@ -171,7 +171,7 @@ public class LoggedIn extends HttpServlet implements PropertiesLoader {
         } catch (JWTVerificationException e) {
            logger.error("Issue with verifying token " + e);
            outputMessage = "There was an error, please try logging in again";
-           url = "error.jsp";
+           url = "error-success.jsp";
         } catch (Exception e) {
             logger.error("There was an error..." + e);
         }

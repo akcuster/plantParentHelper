@@ -53,7 +53,7 @@ public class UserProfile extends HttpServlet {
         // Check that the user's list of plants isn't empty and set the output message accordingly
         checkForPlants(session, plants);
 
-        session.setAttribute("outputMessage", outputMessage);
+        request.setAttribute("outputMessage", outputMessage);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
@@ -92,7 +92,7 @@ public class UserProfile extends HttpServlet {
         } else {
             logger.error("There was a problem logging in...");
             outputMessage = "Sorry, you're not logged in";
-            url = "error.jsp";
+            url = "error-success.jsp";
         }
         return plants;
     }

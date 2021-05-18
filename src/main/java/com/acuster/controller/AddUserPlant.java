@@ -32,70 +32,63 @@ public class AddUserPlant extends HttpServlet {
      * The Logger.
      */
     final Logger logger = LogManager.getLogger(this.getClass());
-    private GenericDao<Plant> plantDao = new GenericDao<>(Plant.class);
-    private GenericDao<User> userDao = new GenericDao<>(User.class);
+    final GenericDao<Plant> plantDao = new GenericDao<>(Plant.class);
+    final GenericDao<User> userDao = new GenericDao<>(User.class);
+
+    private String url;
+    private String outputMessage;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String outputMessage = null;
+        int id;
+        User user;
+        String plantName;
+        String dateAdopted;
+        String plantId;
+        String submitted;
 
         HttpSession session = request.getSession();
-        int id = (int) session.getAttribute("userId");
+
+        submitted = request.getParameter("submit");
+        logger.info("Submitted: " + submitted);
+
+        id = (int) session.getAttribute("userId");
         logger.info("User ID: " + id);
-        User user = (User) session.getAttribute("user");
+
+        user = (User) session.getAttribute("user");
         logger.info("User: " + user);
-        String plantName = request.getParameter("plantName");
+
+        plantName = request.getParameter("plantName");
         if (plantName == null) {
             plantName = (String) session.getAttribute("plantName");
         }
         session.setAttribute("plantName", plantName);
         logger.info("Plant Name: " + plantName);
-        String dateAdopted = request.getParameter("dateAdopted");
+
+        dateAdopted = request.getParameter("dateAdopted");
         if (dateAdopted == null) {
             dateAdopted = (String) session.getAttribute("dateAdopted");
         }
         session.setAttribute("dateAdopted", dateAdopted);
         logger.info("Date Adopted: " + dateAdopted);
-        String plantId = request.getParameter("plantid");
+
+        plantId = request.getParameter("plantid");
         if (plantId == null) {
             plantId = (String) session.getAttribute("plantId");
         }
         session.setAttribute("plantId", plantId);
         logger.info("Plant ID: " + plantId);
-        String url = "/add-plant.jsp";
-        String errorMessage = "";
+
 
         // Check if user is logged in
-        if (!checkIfUserLoggedIn(user, id)) {
-            url = "/error.jsp";
-            errorMessage = "You just be logged in to view this page";
-            request.setAttribute("errorMessage", errorMessage);
-        }
+        checkIfUserLoggedIn(user, id, plantName, plantId, dateAdopted, submitted, session);
 
-        // Make sure a plant was confirmed to add
-        if (plantId != null) {
-            outputMessage = addPlantToCollection(plantId, user, dateAdopted);
-        }
-
-        // Redirect to add plant (or error) page searching for or confirming a plant to add fails
-        if (request.getParameter("submit") == null && plantId == null) {
-            logger.error("Search failed");
-            outputMessage = "Search failed";
-        }
-
-        List<Plant> plants = searchPlants(plantName);
-
-        // Set output message if no plants are found
-        if (plantName == null || plants.isEmpty()) {
-            outputMessage = "Sorry, no plants were found.";
-            logger.info("No plants found");
-        }
 
         // Set output message and plants into session
         request.setAttribute("outputMessage", outputMessage);
-        session.setAttribute("plants", plants);
+
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
@@ -106,28 +99,50 @@ public class AddUserPlant extends HttpServlet {
      *
      * @param user the user
      * @param id   the id
-     * @return the boolean
      */
-    public boolean checkIfUserLoggedIn(User user, int id) {
-        boolean loggedIn;
-        loggedIn = (user != null && id != 0);
+    public void checkIfUserLoggedIn(User user, int id, String plantName, String plantId, String dateAdopted, String submitted, HttpSession session) {
 
-        return loggedIn;
+        if (user != null && id != 0) {
+            directPlants(plantName, plantId, user, dateAdopted, submitted, session);
+        } else {
+            url = "/error-success.jsp";
+            outputMessage = "You must be logged in to view this page";
+        }
+
+
+    }
+
+    public void directPlants(String plantName, String plantId, User user, String dateAdopted, String submitted, HttpSession session) {
+        if (plantId == null && submitted != null) {
+            searchPlants(plantName, session);
+        } else if (plantId != null && submitted == null) {
+            addPlantToCollection(plantId, user, dateAdopted, session);
+            session.setAttribute("plants", null);
+        } else {
+            logger.error("Search failed");
+            outputMessage = "There Was an Error, Please Try Again";
+        }
+        url = "/add-plant.jsp";
     }
 
     /**
      * Search the database for the plants similar to the plant the user wants to add to their collection.
      *
      * @param plantName the plant name
-     * @return the list of plants found
+     * @param session the session
      */
-    public List<Plant> searchPlants(String plantName) {
+    public void searchPlants(String plantName, HttpSession session) {
         List<Plant> plants;
         plants = plantDao.getByPropertyLike("plantName", plantName);
         if (plants.isEmpty()) {
-            plants = null;
+            //TODO add option to add new plant to database
+            outputMessage = "Plant Could Not Be Found";
+            session.setAttribute("plantId", null);
+        } else {
+            outputMessage = "Confirm Plant to Add";
+            session.setAttribute("plants", plants);
         }
-        return plants;
+
     }
 
     /**
@@ -136,17 +151,19 @@ public class AddUserPlant extends HttpServlet {
      * @param plantId     the plant id
      * @param user        the user
      * @param dateAdopted the date adopted
-     * @return the output message
      */
-    public String addPlantToCollection(String plantId, User user, String dateAdopted) {
+    public void addPlantToCollection(String plantId, User user, String dateAdopted, HttpSession session) {
         Plant plant = plantDao.getById(Integer.parseInt(plantId));
         UserPlant newPlant = user.addPlant(plant, LocalDate.parse(dateAdopted));
-        userDao.saveOrUpdate(user);
-        String outputMessage = "Problem adding plant to collection. Try again";
+        logger.info("New Plant: " + newPlant);
+
         if (newPlant != null) {
+            userDao.saveOrUpdate(user);
             outputMessage = "Plant added successfully";
+        } else {
+            outputMessage = "Problem adding plant to collection. Try again";
         }
-        return outputMessage;
+        session.setAttribute("plantId", null);
     }
 
 

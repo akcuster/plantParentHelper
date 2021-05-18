@@ -14,18 +14,17 @@
         <button type="submit" name="submit" value="addPlant" class="btn btn-primary">Add Plant</button>
     </form>
 
-    <c:if test="${outputMessage != null}" >
-        <h3>${outputMessage}</h3>
-    </c:if>
+    <h3>${outputMessage}</h3>
 
     <c:if test="${plants != null}" >
-        <thead>Confirm Plant</thead>
-        <tbody>
-        <tr><th>Plant Name</th><th></th></tr>
-        <c:forEach var="plant" items="${plants}">
-            <tr><td>${plant.plantName}</td><td><a href="${pageContext.request.contextPath}/add-plant?plantid=${plant.id}">Select Plant</a></td></tr>
-        </c:forEach>
-        </tbody>
+        <table>
+            <tbody>
+            <tr><th>Plant Name</th><th></th></tr>
+            <c:forEach var="plant" items="${plants}">
+                <tr><td>${plant.plantName}</td><td><a href="${pageContext.request.contextPath}/add-plant?plantid=${plant.id}">Select Plant</a></td></tr>
+            </c:forEach>
+            </tbody>
+        </table>
     </c:if>
 
 

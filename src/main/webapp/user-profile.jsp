@@ -1,5 +1,5 @@
 
-<%@include file="taglib.jsp"%>
+
 <html>
 <c:import url="head.jsp"/>
 

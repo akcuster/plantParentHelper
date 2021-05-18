@@ -1,15 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: amber
-  Date: 5/4/21
-  Time: 3:39 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="taglib.jsp"%>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
+<c:set var="title" value="Plant Collector - Home" scope="session" />
+  <c:import url="head.jsp" />
   <body>
     <a href="${pageContext.request.contextPath}/log-in">Log In</a>
 

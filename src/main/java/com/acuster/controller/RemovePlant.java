@@ -80,13 +80,13 @@ public class RemovePlant extends HttpServlet {
             session.setAttribute("userId", id);
             logger.info("User is logged in");
             removeUserPlant(userPlantId, user);
-            url = "/error.jsp";
+            url = "/error-success.jsp";
 
             
         } else {
             logger.error("There was a problem logging in...");
             outputMessage = "Sorry, you're not logged in";
-            url = "error.jsp";
+            url = "error-success.jsp";
         }
     }
 
