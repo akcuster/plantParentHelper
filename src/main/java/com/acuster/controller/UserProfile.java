@@ -27,9 +27,7 @@ import java.util.Set;
 
 public class UserProfile extends HttpServlet {
 
-    /**
-     * The Logger.
-     */
+
     final Logger logger = LogManager.getLogger(this.getClass());
     private String url;
     private String outputMessage;
@@ -98,7 +96,7 @@ public class UserProfile extends HttpServlet {
     }
 
     /**
-     * Gets user's plants.
+     * Gets user's plants and adds the plant name and the userPlant id to a map.
      *
      * @param user the user
      * @return the plants

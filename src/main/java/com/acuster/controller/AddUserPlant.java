@@ -28,9 +28,7 @@ import java.util.List;
 )
 
 public class AddUserPlant extends HttpServlet {
-    /**
-     * The Logger.
-     */
+
     final Logger logger = LogManager.getLogger(this.getClass());
     final GenericDao<Plant> plantDao = new GenericDao<>(Plant.class);
     final GenericDao<User> userDao = new GenericDao<>(User.class);
@@ -95,10 +93,14 @@ public class AddUserPlant extends HttpServlet {
     }
 
     /**
-     * Check if user is logged in and return a boolean of true if the user is logged in.
-     *
+     * Check if a user is logged in and call directPlants if they are. Set the url and output message for the error-success page if they are not
      * @param user the user
-     * @param id   the id
+     * @param id the user's id
+     * @param plantName the name of the plant the user wants to add
+     * @param plantId the plant's id
+     * @param dateAdopted the date the user got the plant
+     * @param submitted whether or not the search form was submitted
+     * @param session the session
      */
     public void checkIfUserLoggedIn(User user, int id, String plantName, String plantId, String dateAdopted, String submitted, HttpSession session) {
 
@@ -112,6 +114,16 @@ public class AddUserPlant extends HttpServlet {
 
     }
 
+    /**
+     * Direct to the correct method to handle plants based on if the search form has been submitted, the plant is being
+     * confirmed, or if it's the first time the user is seeing the page
+     * @param plantName the name of the plant the user wants to add
+     * @param plantId the plant's id
+     * @param user the user
+     * @param dateAdopted the date the user got the plant
+     * @param submitted whether or not the form was submitted
+     * @param session the session
+     */
     public void directPlants(String plantName, String plantId, User user, String dateAdopted, String submitted, HttpSession session) {
         if (plantId == null && submitted != null) {
             searchPlants(plantName, session);
@@ -149,11 +161,11 @@ public class AddUserPlant extends HttpServlet {
     }
 
     /**
-     * Add plant to collection. Return output message based on whether or not the plant was found
-     *
-     * @param plantId     the plant id
-     * @param user        the user
-     * @param dateAdopted the date adopted
+     * Add a plant to the user's collection and set the output message
+     * @param plantId the id of the plant to be added to the user's collection
+     * @param user the user
+     * @param dateAdopted the date the user got the plant
+     * @param session the session
      */
     public void addPlantToCollection(String plantId, User user, String dateAdopted, HttpSession session) {
         Plant plant = plantDao.getById(Integer.parseInt(plantId));
