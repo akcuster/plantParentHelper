@@ -5,6 +5,6 @@
   <c:import url="head.jsp" />
   <body>
     <a href="${pageContext.request.contextPath}/log-in">Log In</a>
-
+  <c:import url="footer.jsp" />
   </body>
 </html>
