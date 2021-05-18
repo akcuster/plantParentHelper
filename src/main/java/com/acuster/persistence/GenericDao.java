@@ -115,15 +115,14 @@ public class GenericDao<T> {
      *
      * @param entity entity to be updated
      */
-    public boolean saveOrUpdate(T entity) {
-        boolean saved = false;
+    public void saveOrUpdate(T entity) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
-        saved = session.saveOrUpdate(entity);
+        session.saveOrUpdate(entity);
         transaction.commit();
         session.close();
 
-        return saved;
+
     }
 
     /**
