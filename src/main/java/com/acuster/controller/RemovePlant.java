@@ -42,7 +42,6 @@ public class RemovePlant extends HttpServlet {
         int userPlantId;
         User user;
         int userId;
-        UserPlant userPlant;
 
         user = (User) session.getAttribute("user");
         logger.info("User: " + user);
@@ -53,14 +52,9 @@ public class RemovePlant extends HttpServlet {
         userPlantId = Integer.parseInt(request.getParameter("userPlantId"));
         logger.info("userPlantId parameter: " + userPlantId);
         
-        if (checkIfUserIsLoggedIn(session, user, userId)) {
+        checkIfUserIsLoggedIn(session, user, userId, userPlantId);
 
-
-            removeUserPlant(userPlantId, user);
-            url = "/error.jsp";
-        }
-
-
+        request.setAttribute("outputMessage", outputMessage);
 
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
@@ -73,27 +67,27 @@ public class RemovePlant extends HttpServlet {
         logger.info("UserPlant: " + userPlant);
 
         user.removePlant(userPlant);
-        if (userDao.saveOrUpdate(user)) {
-            outputMessage = "Plant Successfully Removed!";
-        } else {
-            outputMessage = "There Was an Error Removing the Plant";
-        }
+        userDao.saveOrUpdate(user);
+        outputMessage = "Plant Removed Successfully";
+        logger.info("UserPlant: " + userPlant);
     }
 
-    private boolean checkIfUserIsLoggedIn(HttpSession session, User user, int id) {
-        boolean loggedIn = false;
+    private void checkIfUserIsLoggedIn(HttpSession session, User user, int id, int userPlantId) {
+
         // Check if the user is logged in, send them to an error page if not
         if (id != 0) {
             session.setAttribute("user", user);
             session.setAttribute("userId", id);
             logger.info("User is logged in");
+            removeUserPlant(userPlantId, user);
+            url = "/error.jsp";
+
             
         } else {
             logger.error("There was a problem logging in...");
             outputMessage = "Sorry, you're not logged in";
             url = "error.jsp";
         }
-        return loggedIn;
     }
 
 
