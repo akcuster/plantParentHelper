@@ -118,6 +118,9 @@ public class AddUserPlant extends HttpServlet {
         } else if (plantId != null && submitted == null) {
             addPlantToCollection(plantId, user, dateAdopted, session);
             session.setAttribute("plants", null);
+        } else if (plantId == null && submitted == null){
+            outputMessage = "Search for a Plant to Add to Your Collection";
+            logger.info("First Time");
         } else {
             logger.error("Search failed");
             outputMessage = "There Was an Error, Please Try Again";
