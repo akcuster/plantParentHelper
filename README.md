@@ -38,4 +38,6 @@ Keeping track of the varying needs of our chlorophyll loving friends only gets h
 
 ### [Project Plan](designDocuments/projectPlan.md)
 
-### [TimeLog](timeLog.md)
+### [Walk-Through Video](https://youtu.be/nBEYYXmmVi0)
+
+
