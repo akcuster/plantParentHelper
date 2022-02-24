@@ -36,8 +36,6 @@ Keeping track of the varying needs of our chlorophyll loving friends only gets h
 * [Screen Design](designDocuments/screenDesign.md)
 * [Database Design](designDocuments/databaseDesign.png)
 
-### [Project Plan](designDocuments/projectPlan.md)
-
 ### [Walk-Through Video](https://youtu.be/nBEYYXmmVi0)
 
 
